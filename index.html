@@ -3,10 +3,119 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <div class="page-header__logo">
+        <img src="http://placehold.it/102x83" alt="Sedona" width="102px" height="83px">
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <button class="main-nav__button-close" type="button">Закрыть меню</button>
+          <ul class="main-nav__items">
+            <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+            <li class="main-nav__item"><a href="">Фото и видео</a></li>
+            <li class="main-nav__item"><a href="">Форма отзыва</a></li>
+            <li class="main-nav__item"><a href="">HTML Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="page-header__sedona-welcome">
+        <b class="page-header__welcome-title">Welcome</b>
+        <p class="page-header__welcome-title-sign">to the gargeous</p>
+        <h1 class="page-header__sedona-title">Sedona</h1>
+        <p class="page-header__sedona-title-sign">"Because the Grand Canyon sucks!"</p>
+        <!-- Или как в макете? -->
+        <!-- <img src="http://placehold.it/282x214" alt="#" width="282px" height="214px"> -->
+      </div>
+    </header>
+    <main>
+      <section class="reasons">
+        <header class="reasons__header">
+          <b class="reasons__intro">Седона — небольшой городок в аризоне, заслуживающий большего!</b>
+          <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+        </header>
+        <div class="reasons__wrapper">
+          <ul class="reasons__items">
+            <li class="reasons__item reasons__item--real-city">
+              <h2 class="reasons__title">Настоящий городок</h2>
+              <p class="reasons__number">№1</p>
+              <p class="reasons__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+              <img class="reasons__city-photo" src="http://placehold.it/320x260" alt="Beautiful Sedona" width="320px" height="260px">
+              <ul class="reasons__city-advantages">
+                <li class="reasons__city-advantage reasons__city-advantage--housing">
+                  <img src="http://placehold.it/32x38" alt="" width="32px" height="38px">
+                  <h3>Жилье</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </li>
+                <li class="reasons__city-advantage reasons__city-advantage--souvenirs">
+                  <img src="http://placehold.it/32x38" alt="" width="32px" height="38px">
+                  <h3>Сувениры</h3>
+                  <p>Не только китайского, но и местного производства!</p>
+                </li>
+                <li class="reasons__city-advantage reasons__city-advantage--food">
+                  <img src="http://placehold.it/32x38" alt="" width="32px" height="38px">
+                  <h3>Еда</h3>
+                  <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+                </li>
+              </ul>
+            </li>
+            <li class="reasons__item reasons__item--devils-bridge">
+              <h2 class="reasons__title">Там есть мост дьявола</h2>
+              <p class="reasons__number">№2</p>
+              <p class="reasons__description">Да, по нему можно пройтись! Если вы конечно осмелитесь</p>
+              <img class="reasons__bridge-photo" src="http://placehold.it/320x260" alt="Devils Bridge" width="320px" height="260px">
+            </li>
+            <li class="reasons__item">
+              <h2 class="reasons__title">Небольшая площадь</h2>
+              <p class="reasons__number">№3</p>
+              <p class="reasons__description">Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="reasons__item">
+              <h2 class="reasons__title">Красивая дорога</h2>
+              <p class="reasons__number">№4</p>
+              <p class="reasons__description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="reasons__item">
+              <h2 class="reasons__title">Мало туристов</h2>
+              <p class="reasons__number">№5</p>
+              <p class="reasons__description">Большинство едет в гранд каньон и толпится там!</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="offer">
+        <div class="offer__wrapper">
+        <h2 class="offer__title">Заинтересовались?</h2>
+        <p class="offer__description">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a href="#" class="btn offer__search-button">Найти гостиницу</a>
+        </div>
+      </section>
+      <section class="map">
+        <img src="http://placehold.it/320x350" alt="#" width="320px" height="350px">
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+      <p class="page-footer__hash-teg">
+        <b class="hash-teg">#visitsedona</b>
+      </p>
+      <p class="page-footer__social">
+        <span class="social-links">
+          <a class="social-link social-link--tw" href="#">Мы в Твиттере</a>
+          <a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a>
+          <a class="social-link social-link--yt" href="#">Мы на YouTube</a>
+        </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано:
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="http://placehold.it/27x34" alt="" width="27px" height="34px">
+        </a>
+      </p>
+      </div>
+    </footer>
   </body>
 </html>

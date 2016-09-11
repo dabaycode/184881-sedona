@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона: оставить отзыв</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  </head>
+  <body>
+    <header class="page-review-header">
+      <div class="page-header__logo">
+        <a href="index.html">
+          <img src="http://placehold.it/102x83" alt="Sedona" width="102px" height="83px">
+        </a>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <button class="main-nav__button-close" type="button">Закрыть меню</button>
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a>Главная</a></li>
+            <li class="main-nav__item"><a href="">Фото и видео</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="">Форма отзыва</a></li>
+            <li class="main-nav__item"><a href="">HTML Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="page-review-header__sedona-title">
+        <img src="http://placehold.it/229x39" alt="#" width="229px" height="39px">
+      </div>
+    </header>
+    <main>
+      <section class="review">
+        <header class="review__header">
+          <b class="review__intro">Оставьте свой отзыв</b>
+          <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </header>
+        <div class="review__wrapper">
+          <form action="" class="review-form" method="post">
+            <fieldset class="review-form__name">
+              <h2 class="review-form__name-title">Представьтесь, пожалуйста:</h2>
+              <label class="review-form__name-label" for="name">Имя:</label>
+              <input class="review-form__name-input" type="text" name="name" id="name" value="Петр">
+              <label class="review-form__name-label" for="last-name">Фамилия:</label>
+              <input class="review-form__last-name-input" type="text" name="last-name" id="last-name" value="Иванов">
+              <label class="review-form__name-label" for="patronymic">Фамилия:</label>
+              <input class="review-form__patronymic-input" type="text" name="patronymic" id="patronymic" value="Алекандрович">
+            </fieldset>
+            <fieldset class="review-form__contacts">
+              <h2 class="review-form__contacts-title">Контактная информация:</h2>
+              <label class="review-form__phone-label" for="phone">Контактный телефон:</label>
+              <input type="phone" name="phone" id="phone" placeholder="Введите телефон">
+              <small class="review-form__phone-error review-form__phone-error--visually-hidden">Ошибка, перепроверьте номер</small>
+              <label class="review-form__email-label" for="email">Электронная почта:</label>
+              <input type="email" name="email" id="email" placeholder="Введите e-mail">
+            </fieldset>
+            <fieldset class="review-form__impress">
+              <h2 class="review-form__impress-title">Ваше общее впечатление:</h2>
+              <label class="review-form__impress-label"  for="impress-good">Скорее положительное</label>
+            <input class="review-form__impress-input" type="radio" name="impress" value="impress-good" id="impress-good" checked>
+            <label class="review-form__impress-label"  for="impress-bad">Скорее положительное</label>
+            <input class="review-form__impress-input" type="radio" name="impress" value="impress-bad" id="impress-bad">
+            <label class="review-form__impress-label"  for="impress-dont-know">Затрудняюсь ответить</label>
+            <input class="review-form__impress-input" type="radio" name="impress" value="impress-dont-know" id="impress-dont-know">
+            </fieldset>
+            <fieldset class="review-form__sightsee">
+              <h2 class="review-form__sightsee-title">Посещенные достопримечательности:</h2>
+              <label class="review-form__sightsee-label"  for="sight-1">Мост Дьявола</label>
+              <input class="review-form__sightsee-input" type="checkbox" name="sight" value="Devils bridge" id="sight-1" checked>
+              <label class="review-form__sightsee-label"  for="sight-2">Слайд-парк</label>
+              <input class="review-form__sightsee-input" type="checkbox" name="sight" value="Slide park" id="sight-2" checked>
+              <label class="review-form__sightsee-label"  for="sight-3">Гора-Колокол</label>
+              <input class="review-form__sightsee-input" type="checkbox" name="sight" value="Bell mountain" id="sight-3">
+              <label class="review-form__sightsee-label"  for="sight-4">Красные скалы</label>
+              <input class="review-form__sightsee-input" type="checkbox" name="sight" value="Red rocks" id="sight-4" checked>
+            </fieldset>
+            <fieldset class="review-form__emotions">
+              <h2 class="review-form__emotions-title">Опишите свои эмоции:</h2>
+              <textarea class="review-form__emotions-area" placeholder="Опишите подробно все свои восторги"></textarea>
+            </fieldset>
+            <button class="btn review-form__send-button" type="submit" name="send-form-button">Отправить отзыв</button>
+          </form>
+         </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+      <p class="page-footer__hash-teg">
+        <b class="hash-teg">#visitsedona</b>
+      </p>
+      <p class="page-footer__social">
+        <span class="social-links">
+          <a class="social-link social-link--tw" href="#">Мы в Твиттере</a>
+          <a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a>
+          <a class="social-link social-link--yt" href="#">Мы на YouTube</a>
+        </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано:
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="http://placehold.it/27x34" alt="" width="27px" height="34px">
+        </a>
+      </p>
+      </div>
+    </footer>
+  </body>
+  <div class="failure-pop-up">
+    <h2 class="failure-pop-up__title">Что-то пошло не так!</h2>
+    <p class="failure-pop-up__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button type="button" class="btn pop-up-close-button">Ок</button>
+  </div>
+  <div class="success-pop-up">
+    <h2 class="success-pop-up__title">Ваш отзыв отправлен!</h2>
+    <p class="success-pop-up__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <button type="button" class="btn pop-up-close-button">Закрыть окно</button>
+  </div>
+</html>
