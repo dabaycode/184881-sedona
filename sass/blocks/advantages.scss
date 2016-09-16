@@ -1,0 +1,12 @@
+@import "../mixin";
+@import "../variables";
+.advantages {
+  &__title {
+    @include title($title-color);
+    line-height: 26px;
+  }
+  &__text {
+    @include text($text-color);
+    line-height: 21px;
+  }
+}

@@ -1,0 +1,15 @@
+.main-nav {
+  &__item {
+    font-family: $font-main;
+    font-weight: $bold;
+    font-size: 18px;
+    line-height: 40px;
+    background-color: #81b3d2;
+    a {
+      color: #ffffff;
+    }
+  }
+  &--closed {
+    display: none;
+  }
+}

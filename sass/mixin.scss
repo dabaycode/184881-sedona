@@ -1,0 +1,21 @@
+@import "variables";
+@mixin bg-img {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+@mixin horizont-center($width) {
+  left: 50%;
+  margin-left: -$width/2;
+}
+@mixin title($title-color) {
+  font-weight: $bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $title-color;
+}
+@mixin text($text-color) {
+  font-weight: $normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $text-color;
+}

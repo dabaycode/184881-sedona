@@ -1,0 +1,20 @@
+@import "../mixin";
+.page-promo {
+  position: relative;
+  z-index: 10;
+  min-height: 158px;
+  @include bg-img;
+  background-size: 100% 100%;
+  &__title {
+    position: relative;
+    @include horizont-center(229px);
+    margin-top: 52px;
+    &--main {
+      @include horizont-center(282px);
+      margin-top: 90px;
+    }
+  }
+  &--main {
+    min-height: 390px;
+  }
+}
