@@ -1,0 +1,17 @@
+@import "../mixin";
+@import "../variables";
+.offer {
+  min-height: 190px;
+  padding-top: 20px;
+  text-align: center;
+  &__title {
+    margin-top: 0;
+    @include title($title-color);
+    font-size: 21px;
+    line-height: 26px;
+  }
+  &__text {
+    @include text($text-color);
+    line-height: 24px;
+  }
+}

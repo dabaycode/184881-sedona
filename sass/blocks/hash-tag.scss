@@ -1,0 +1,7 @@
+@import "../mixin";
+@import "../variables";
+.hash-tag {
+  @include title($title-color);
+  font-size: 21px;
+  line-height: 26px;
+}

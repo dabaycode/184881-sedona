@@ -1,0 +1,19 @@
+@import "../mixin";
+@import "../variables";
+.review-form {
+  &__field{
+    padding-top: 10px;
+  }
+  &__title
+  {
+    margin-top: 0;
+    text-align: center;
+    @include title($title-color);
+    line-height: 26px;
+  }
+  &__label
+  {
+    @include text($text-color);
+    line-height: 26px;
+  }
+}

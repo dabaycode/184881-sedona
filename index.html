@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__top-row">
-        <a class="logo" href="">
-          <img src="http://placehold.it/102x83" alt="Sedona" width="102px" height="83px">
+        <a class="page-header__logo logo" href="#">
+          <img src="img/logo-sedona-mobile.svg" alt="Sedona" width="102px" height="83px">
         </a>
-        <button class="main-nav__btn main-nav__btn--close" type="button">Закрыть меню</button>
+        <button class="header-toogle__btn header-toogle__btn--close" type="button">Закрыть меню</button>
       </div>
     </header>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
         <li class="main-nav__item"><a href="">Фото и видео</a></li>
@@ -23,7 +23,7 @@
       </ul>
     </nav>
     <div class="page-promo page-promo--main">
-      <img class="page-promo__title" src="http://placehold.it/282x214" alt="#" width="282px" height="214px">
+      <img class="page-promo__title page-promo__title--main" src="img/text-sedona-index.svg" alt="#" width="282px" height="214px">
     </div>
     <main>
       <div class="intro">
@@ -31,39 +31,39 @@
           <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </div>
       <section class="photo-reason">
-        <div class="reason">
+        <div class="reason reason--blue">
           <h2 class="reason__title">Настоящий городок</h2>
           <p class="reason__number">№1</p>
           <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
-        <img class="photo-reason__img" src="http://placehold.it/320x260" alt="Beautiful Sedona" width="320px" height="260px">
+        <img class="photo-reason__img" src="img/photo-city@1x.jpg" alt="Beautiful Sedona" width="320px" height="260px">
       </section>
       <section class="advantages">
         <ul class="advantages__list">
           <li class="advantages__item">
-            <img class="advantages__icon" src="http://placehold.it/32x38" alt="" width="32px" height="38px">
+            <img class="advantages__icon" src="img/icon-house.svg" alt="" width="32px" height="38px">
             <h3 class="advantages__title">Жилье</h3>
             <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </li>
           <li class="advantages__item">
-            <img class="advantages__icon" src="http://placehold.it/32x38" alt="" width="32px" height="38px">
+            <img class="advantages__icon" src="img/icon-gift.svg" alt="" width="32px" height="38px">
             <h3 class="advantages__title">Сувениры</h3>
             <p class="advantages__text">Не только китайского, но и местного производства!</p>
           </li>
           <li class="advantages__item">
-            <img class="advantages__icon" src="http://placehold.it/32x38" alt="" width="32px" height="38px">
+            <img class="advantages__icon" src="img/icon-burger.svg" alt="" width="32px" height="38px">
             <h3 class="advantages__title">Еда</h3>
             <p class="advantages__text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
           </li>
         </ul>
       </section>
       <section class="photo-reason">
-        <div class="reason">
+        <div class="reason reason--blue">
           <h2 class="reason__title">Там есть мост дьявола</h2>
           <p class="reason__number">№2</p>
           <p class="reason__text">Да, по нему можно пройтись! Если вы конечно осмелитесь</p>
         </div>
-        <img class="photo-reason__img" src="http://placehold.it/320x260" alt="Devils Bridge" width="320px" height="260px">
+        <img class="photo-reason__img" src="img/photo-4-mobile@1x.jpg" alt="Devils Bridge" width="320px" height="260px">
       </section>
       <section class="reasons-group">
         <div class="reason reason--grey">
@@ -101,7 +101,7 @@
       <p class="copyright">
         Разработано:
         <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="http://placehold.it/27x34" alt="" width="27px" height="34px">
+          <img src="img/htmlacademy.svg" alt="" width="27px" height="34px">
         </a>
       </p>
     </footer>

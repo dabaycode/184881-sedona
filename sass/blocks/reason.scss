@@ -1,0 +1,29 @@
+@import "../mixin";
+@import "../variables";
+.reason {
+  padding-top: 30px;
+  padding-bottom: 34.5px;
+  text-align: center;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include title($title-color);
+    line-height: 26px;
+  }
+  &__text, &__number {
+    @include text($text-color);
+    line-height: 21px;
+  }
+  &__text {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  &--blue {
+    background-color: #81b3d2;
+    color: #ffffff;
+  }
+  &--grey {
+    background-color: #eeeeee;
+    color: #000000;
+  }
+}
