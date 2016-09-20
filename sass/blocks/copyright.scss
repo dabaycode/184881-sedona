@@ -1,0 +1,22 @@
+@import "../mixin";
+@import "../variables";
+.copyright {
+  position: relative;
+  margin-top: 20px;
+  @include text(#000000);
+  line-height: 26px;
+  @media #{$tablet} {
+    display: table-cell;
+    width: 33%;
+    margin-top: 0;
+  }
+}
+.copyright-link {
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  width: 30px;
+  height: 35px;
+  background-image: url(../img/htmlacademy.svg);
+  background-repeat: no-repeat;
+}

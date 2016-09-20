@@ -1,3 +1,9 @@
 .page-footer {
+  width: 100%;
+  padding-top: 30px;
   text-align: center;
+  @media #{$tablet} {
+    display: table;
+    padding-bottom: 30px;
+  }
 }

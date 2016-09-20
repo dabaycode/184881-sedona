@@ -4,6 +4,10 @@
   padding-top: 30px;
   padding-bottom: 34.5px;
   text-align: center;
+  @media #{$tablet} {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
   &__title {
     margin-top: 0;
     margin-bottom: 0;
@@ -15,15 +19,31 @@
     line-height: 21px;
   }
   &__text {
-    margin-top: 8px;
+    margin-top: 0;
     margin-bottom: 0;
   }
   &--blue {
     background-color: #81b3d2;
-    color: #ffffff;
+    color: #ffffff; //как перебить?
+    @media #{$tablet} {
+      float: left;
+      width: 33%;
+      min-height: 210px;
+      }
   }
   &--grey {
     background-color: #eeeeee;
     color: #000000;
+    @media #{$tablet} {
+      display: table-cell;
+      width: 33%;
+      padding-bottom: 50px;
+    }
+  }
+  &--right{
+    @media #{$tablet} {
+    float: right;
+    width: 33%;
+    }
   }
 }

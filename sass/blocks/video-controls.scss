@@ -1,0 +1,8 @@
+.video-controls {
+  @media #{$tablet} {
+    position: relative;
+    bottom: 93px;
+    min-height: 93px;
+    background-color: rgba(0,0,0,0.6);
+  }
+}

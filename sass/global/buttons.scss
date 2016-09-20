@@ -4,13 +4,31 @@
   display: block;
   padding: 0;
   margin: 0;
-  height: 58px;
-  width: 280px;
+  height: $btn-height;
+  width: $btn-width;
   text-align: center;
   vertical-align: middle;
   border: none;
   outline: none;
   cursor: pointer;
-  @include title($buttons-text-color);
-  background-color: $buttons-color;
+  @include title($btn-text-color);
+  background-color: $btn-color;
+  line-height: $btn-height;
+}
+.hotel-search-btn {
+  position: relative;
+  margin-top: 38px;
+  margin-bottom: 50px;
+  @include horizont-center($btn-width);
+}
+.header-toogle__btn {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  @media #{$tablet} {
+    display: none;
+  }
+  @media #{$desktop} {
+    display: none;
+  }
 }

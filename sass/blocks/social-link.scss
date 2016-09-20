@@ -1,0 +1,22 @@
+.social-link {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: #81b3d2;
+  &--tw {
+    background-image: url("../img/icon-twitter.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &--yt {
+    background-image: url("../img/icon-youtube.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &--fb {
+    background-image: url("../img/icon-facebook.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
