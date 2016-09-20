@@ -1,10 +1,9 @@
 @import "../mixin";
 .page-promo {
   position: relative;
-  z-index: 10;
+  z-index: 0;
   min-height: 158px;
   @include bg-img;
-  background-size: 100% 100%;
   &__title {
     position: relative;
     @include horizont-center(229px);

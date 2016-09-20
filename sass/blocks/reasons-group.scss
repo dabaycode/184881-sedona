@@ -1,0 +1,6 @@
+.reasons-group {
+  width: 100%;
+  @media #{$tablet} {
+    display: table;
+  }
+}

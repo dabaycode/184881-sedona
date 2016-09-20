@@ -1,9 +1,11 @@
 @import "../mixin";
 @import "../variables";
 .offer {
-  min-height: 190px;
   padding-top: 20px;
   text-align: center;
+  @media #{$tablet} {
+    padding-top: 60px;
+  }
   &__title {
     margin-top: 0;
     @include title($title-color);
@@ -11,7 +13,18 @@
     line-height: 26px;
   }
   &__text {
+    margin-bottom: 0;
     @include text($text-color);
     line-height: 24px;
+  }
+  &__tittle--gallery {
+    @media #{$tablet} {
+      font-size: 30px;
+    }
+  }
+  &__text--gallery {
+    @media #{$tablet} {
+    margin-bottom: 80px;
+    }
   }
 }

@@ -7,5 +7,11 @@ $title-color: #000000;
 $text-color: #333333;
 
 // Buttons
-$buttons-color: #81b3d2;
-$buttons-text-color: #ffffff;
+$btn-color: #81b3d2;
+$btn-text-color: #ffffff;
+$btn-width: 280px;
+$btn-height: 58px;
+
+// Widths
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";

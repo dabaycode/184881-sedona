@@ -1,0 +1,18 @@
+@import "../mixin";
+@import "variables";
+.photo-reason {
+  @include clearfix;
+  &__img {
+    width: 100%;
+    @media #{$tablet} {
+      float: right;
+      width: 67%;
+      }
+      &--left {
+      @media #{$tablet} {
+        float: left;
+        width: 67%;
+        }
+      }
+  }
+}

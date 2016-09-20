@@ -1,12 +1,50 @@
 @import "../mixin";
 @import "../variables";
 .advantages {
+  &__list {
+    @media #{$tablet} {
+      display: table;
+    }
+  }
+  &__item {
+    padding-left: 71px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media #{$tablet} {
+      display: table-cell;
+      padding: 60px 0;
+      width: 33%;
+      text-align: center;
+    }
+  }
+  &__icon {
+    position: absolute;
+    left: 18px;
+    margin-top: -9px;
+    @media #{$tablet} {
+      position: relative;
+      width: 75px;
+      height: 72px;
+      margin-left: -37.5px;
+    }
+  }
   &__title {
+    margin: 0;
+    margin-bottom: 20px;
     @include title($title-color);
     line-height: 26px;
+    @media #{$tablet} {
+      margin: 0;
+      margin-top: 30px;
+    }
   }
   &__text {
+    margin: 0;
     @include text($text-color);
     line-height: 21px;
+    @media #{$tablet} {
+      margin: 0;
+      margin-top: 30px;
+    }
   }
 }
