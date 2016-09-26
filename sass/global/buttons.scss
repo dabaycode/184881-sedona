@@ -15,12 +15,6 @@
   background-color: $btn-color;
   line-height: $btn-height;
 }
-.hotel-search-btn {
-  position: relative;
-  margin-top: 38px;
-  margin-bottom: 50px;
-  @include horizont-center($btn-width);
-}
 .header-toogle__btn {
   position: absolute;
   top: 20px;

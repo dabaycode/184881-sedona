@@ -8,20 +8,6 @@
     padding-top: 50px;
     padding-bottom: 0;
   }
-  &__title {
-    margin-top: 0;
-    margin-bottom: 0;
-    @include title($title-color);
-    line-height: 26px;
-  }
-  &__text, &__number {
-    @include text($text-color);
-    line-height: 21px;
-  }
-  &__text {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
   &--blue {
     background-color: #81b3d2;
     color: #ffffff; //как перебить?
@@ -35,15 +21,28 @@
     background-color: #eeeeee;
     color: #000000;
     @media #{$tablet} {
-      display: table-cell;
-      width: 33%;
+      // display: table-cell;
+      flex-basis: calc(100%/3);
       padding-bottom: 50px;
     }
   }
   &--right{
     @media #{$tablet} {
-    float: right;
-    width: 33%;
+    order: 1;
     }
   }
 }
+.reason__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include title($title-color);
+    line-height: 26px;
+  }
+.reason__text, .reason__number {
+    @include text($text-color);
+    line-height: 21px;
+  }
+.reason__text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }

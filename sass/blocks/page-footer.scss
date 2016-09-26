@@ -1,9 +1,15 @@
+@import "../variables";
 .page-footer {
-  width: 100%;
+  // width: 100%;
   padding-top: 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media #{$tablet} {
-    display: table;
-    padding-bottom: 30px;
+    // display: table;
+    flex-direction: row;
+    padding: 30px 60px 30px;
+    align-items: center;
   }
 }

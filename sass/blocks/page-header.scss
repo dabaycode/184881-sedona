@@ -1,8 +1,6 @@
 @import "../mixin";
-.page-header {
-  &__top-row  {
-    position: relative;
-    width: 100%;
+.page-header__top-row  {
+    // width: 100%;
     background-color: #ffffff;
     min-height: 56px;
     @media #{$tablet} {
@@ -10,8 +8,7 @@
       min-height: 0;
     }
   }
-
-  &__logo {
+.page-header__logo {
     position: absolute;
     @include horizont-center(102px);
     z-index: 1;
@@ -19,4 +16,3 @@
       top: 0;
     }
   }
-}

@@ -1,6 +1,9 @@
 .reasons-group {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   @media #{$tablet} {
-    display: table;
+    flex-direction: row;
+    justify-content: space-between;
+    // display: table;
   }
 }
