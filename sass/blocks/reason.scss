@@ -1,37 +1,5 @@
 @import "../mixin";
 @import "../variables";
-.reason {
-  padding-top: 30px;
-  padding-bottom: 34.5px;
-  text-align: center;
-  @media #{$tablet} {
-    padding-top: 50px;
-    padding-bottom: 0;
-  }
-  &--blue {
-    background-color: #81b3d2;
-    color: #ffffff; //как перебить?
-    @media #{$tablet} {
-      float: left;
-      width: 33%;
-      min-height: 210px;
-      }
-  }
-  &--grey {
-    background-color: #eeeeee;
-    color: #000000;
-    @media #{$tablet} {
-      // display: table-cell;
-      flex-basis: calc(100%/3);
-      padding-bottom: 50px;
-    }
-  }
-  &--right{
-    @media #{$tablet} {
-    order: 1;
-    }
-  }
-}
 .reason__title {
     margin-top: 0;
     margin-bottom: 0;
@@ -45,4 +13,37 @@
 .reason__text {
     margin-top: 0;
     margin-bottom: 0;
+  }
+  .reason {
+    padding-top: 30px;
+    padding-bottom: 34.5px;
+    text-align: center;
+    @media #{$tablet} {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+    &--blue {
+      background-color: #81b3d2;
+      color: #ffffff;
+
+      @media #{$tablet} {
+        float: left;
+        width: 33%;
+        min-height: 210px;
+        }
+    }
+    &--grey {
+      background-color: #eeeeee;
+      color: #000000;
+      @media #{$tablet} {
+        // display: table-cell;
+        flex-basis: calc(100%/3);
+        padding-bottom: 50px;
+      }
+    }
+    &--right{
+      @media #{$tablet} {
+      order: 1;
+      }
+    }
   }
