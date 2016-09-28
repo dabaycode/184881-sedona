@@ -15,16 +15,38 @@
   background-color: $btn-color;
   line-height: $btn-height;
 }
-.hotel-search-btn {
-  position: relative;
-  margin-top: 38px;
-  margin-bottom: 50px;
-  @include horizont-center($btn-width);
-}
 .header-toogle__btn {
   position: absolute;
-  top: 20px;
-  right: 5px;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  z-index: 2;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  width: 0;
+  height: 0;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    right: 17px;
+
+    width: 28px;
+    height: 5px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
   @media #{$tablet} {
     display: none;
   }

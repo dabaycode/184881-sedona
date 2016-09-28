@@ -1,30 +1,56 @@
 @import "../mixin";
 @import "../variables";
 .offer {
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 28px;
   text-align: center;
+  width: 100%;
   @media #{$tablet} {
-    padding-top: 60px;
+    padding-top: 55px;
+    padding-bottom: 89px;
   }
-  &__title {
+  @media #{$desktop} {
+    padding-top: 55px;
+    padding-bottom: 102px;
+  }
+}
+.offer__title {
     margin-top: 0;
     @include title($title-color);
     font-size: 21px;
     line-height: 26px;
-  }
-  &__text {
-    margin-bottom: 0;
-    @include text($text-color);
-    line-height: 24px;
-  }
-  &__tittle--gallery {
     @media #{$tablet} {
       font-size: 30px;
     }
   }
-  &__text--gallery {
+.offer__text {
+    margin-top: 18px;
+    margin-bottom: 0;
+    @include text($text-color);
+    line-height: 24px;
+    @media #{$tablet} {
+     margin-top: 31px;
+    }
+  }
+.offer__tittle--gallery {
+    @media #{$tablet} {
+      font-size: 30px;
+    }
+  }
+.offer__text--gallery {
     @media #{$tablet} {
     margin-bottom: 80px;
     }
+  }
+.offer__search-btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  font-size: 21px;
+  width: 59.63541666666667%;
+  @media #{$tablet} {
+  margin-bottom: 0;
   }
 }

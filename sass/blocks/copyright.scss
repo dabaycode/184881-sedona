@@ -1,22 +1,22 @@
 @import "../mixin";
 @import "../variables";
 .copyright {
-  position: relative;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 27px;
+  margin-bottom: 10px;
   @include text(#000000);
   line-height: 26px;
   @media #{$tablet} {
-    display: table-cell;
-    width: 33%;
-    margin-top: 0;
+    // display: table-cell;
+    // width: 33%;
+    margin: 0;
   }
 }
-.copyright-link {
-  display: inline-block;
-  position: relative;
-  top: 15px;
-  width: 30px;
-  height: 35px;
-  background-image: url(../img/htmlacademy.svg);
-  background-repeat: no-repeat;
+.copyright__icon {
+  width: 40px;
+  height: auto;
+  margin-top: 5px;
+  margin-left: 10px;
 }

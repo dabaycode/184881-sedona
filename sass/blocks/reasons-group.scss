@@ -1,6 +1,11 @@
 .reasons-group {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #eeeeee;
   @media #{$tablet} {
-    display: table;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
