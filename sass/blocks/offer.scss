@@ -3,11 +3,16 @@
 .offer {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 28px;
   text-align: center;
   width: 100%;
   @media #{$tablet} {
-    padding-top: 60px;
+    padding-top: 55px;
+    padding-bottom: 89px;
+  }
+  @media #{$desktop} {
+    padding-top: 55px;
+    padding-bottom: 102px;
   }
 }
 .offer__title {
@@ -15,11 +20,18 @@
     @include title($title-color);
     font-size: 21px;
     line-height: 26px;
+    @media #{$tablet} {
+      font-size: 30px;
+    }
   }
 .offer__text {
+    margin-top: 18px;
     margin-bottom: 0;
     @include text($text-color);
     line-height: 24px;
+    @media #{$tablet} {
+     margin-top: 31px;
+    }
   }
 .offer__tittle--gallery {
     @media #{$tablet} {
@@ -34,6 +46,11 @@
 .offer__search-btn {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 38px;
+  margin-top: 35px;
   margin-bottom: 50px;
+  font-size: 21px;
+  width: 59.63541666666667%;
+  @media #{$tablet} {
+  margin-bottom: 0;
+  }
 }

@@ -10,14 +10,19 @@
     @include text($text-color);
     line-height: 21px;
   }
+  .reason__number {
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
 .reason__text {
     margin-top: 0;
     margin-bottom: 0;
   }
   .reason {
-    padding-top: 30px;
-    padding-bottom: 34.5px;
     text-align: center;
+    @media #{$only-mobile} {
+      padding: 27px 20px;
+    }
     @media #{$tablet} {
       padding-top: 50px;
       padding-bottom: 0;
@@ -25,20 +30,30 @@
     &--blue {
       background-color: #81b3d2;
       color: #ffffff;
-
+      padding-top: 39px;
+      padding-bottom: 41px;
       @media #{$tablet} {
-        float: left;
+        padding-top: 44px;
+        padding-bottom: 41px;
         width: 33%;
-        min-height: 210px;
         }
     }
     &--grey {
       background-color: #eeeeee;
       color: #000000;
+      @media #{$only-mobile} {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
       @media #{$tablet} {
         // display: table-cell;
-        flex-basis: calc(100%/3);
-        padding-bottom: 50px;
+        width: calc(100%/3);
+        padding-bottom: 99px;
+        padding-top: 40px;
+      }
+    }
+    &--grey:last-child {
+      @media #{$only-mobile} {
+        border: none;
       }
     }
     &--right{
