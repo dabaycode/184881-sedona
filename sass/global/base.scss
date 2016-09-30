@@ -25,3 +25,29 @@ a {
     width: 1200px;
   }
 }
+.wrap {
+  @media #{$only-mobile} {
+    &--mobile {
+      display: inline;
+    }
+    &--tablet, &--desktop {
+      display: none;
+    }
+  }
+  @media #{$tablet} and #{$tablet-max}  {
+    &--tablet {
+      display: inline !important;
+    }
+    &--mobile, &--desktop  {
+      display: none;
+    }
+  }
+  @media #{$desktop} {
+    &--desktop {
+      display: inline !important;
+    }
+  &--mobile, &--tablet  {
+      display: none;
+    }
+  }
+}

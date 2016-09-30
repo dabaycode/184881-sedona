@@ -5,6 +5,9 @@
     margin-bottom: 0;
     @include title($title-color);
     line-height: 26px;
+    @media #{$tablet} {
+      font-size: 21px;
+    }
   }
 .reason__text, .reason__number {
     @include text($text-color);
@@ -13,6 +16,9 @@
   .reason__number {
     margin-top: 10px;
     margin-bottom: 14px;
+    @media #{$tablet} {
+      margin-bottom: 21px;
+    }
   }
 .reason__text {
     margin-top: 0;
@@ -21,7 +27,7 @@
   .reason {
     text-align: center;
     @media #{$only-mobile} {
-      padding: 27px 20px;
+      padding: 27px 0;
     }
     @media #{$tablet} {
       padding-top: 50px;
@@ -31,12 +37,15 @@
       background-color: #81b3d2;
       color: #ffffff;
       padding-top: 39px;
-      padding-bottom: 41px;
+      padding-bottom: 42px;
       @media #{$tablet} {
-        padding-top: 44px;
-        padding-bottom: 41px;
+        box-sizing: border-box;
+        padding: 44px 35px 41px 35px;
         width: 33%;
         }
+      @media #{$desktop} {
+        padding-top: 51px;
+      }
     }
     &--grey {
       background-color: #eeeeee;
@@ -47,8 +56,11 @@
       @media #{$tablet} {
         // display: table-cell;
         width: calc(100%/3);
-        padding-bottom: 99px;
-        padding-top: 40px;
+        padding-bottom: 45px;
+        padding-top: 43px;
+      }
+      @media #{$desktop} {
+        padding-bottom: 67px;
       }
     }
     &--grey:last-child {

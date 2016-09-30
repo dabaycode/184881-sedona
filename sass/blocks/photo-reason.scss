@@ -1,7 +1,6 @@
 @import "../mixin";
 @import "variables";
 .photo-reason {
-  // @include clearfix;
   display: flex;
   flex-direction: column;
   @media #{$tablet} {
@@ -11,7 +10,6 @@
 .photo-reason__img {
     width: 100%;
     @media #{$tablet} {
-      // float: right;
       width: 67%;
       }
   }

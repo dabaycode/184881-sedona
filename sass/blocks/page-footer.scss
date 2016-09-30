@@ -6,10 +6,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  &--form {
+    padding-top: 72px;
+  }
   @media #{$tablet} {
-    // display: table;
+    &--form {
+      padding-top: 91px;
+    }
+    &.page-footer--gallery {
+      padding-top: 115px;
+    }
     flex-direction: row;
-    padding: 30px 60px 30px;
+    padding: 30px 60px 30px 60px;
     align-items: center;
   }
+    @media #{$desktop} {
+    padding: 30px 127px 31px 132px;
+    &--form {
+        padding-top: 26px;
+    }
+}
 }

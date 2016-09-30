@@ -28,14 +28,17 @@
         <img class="page-promo__title" src="img/text-sedona.svg" alt="#" width="229px" height="39px">
       </div>
       <main>
-        <div class="intro">
+        <div class="intro intro--review">
           <h1 class="intro__title">Оставьте свой отзыв</h1>
-          <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="intro__text intro__text--review">Помогите нашим отелям стать лучше! оставьте отзыв о них,
+            <br class="wrap wrap--tablet wrap--desktop">
+             а также о посещенных вами достопримечательностях
+           </p>
         </div>
         <form action="" class="review-form" method="post">
           <fieldset class="review-form__field review-form__field--name">
-            <div class="review-form__wrapper">
-              <h2 class="review-form__title">Представьтесь, пожалуйста:</h2>
+            <div class="review-form__wrapper review-form__wrapper--name">
+              <h2 class="review-form__title review-form__title--left review-form__title--desktop-name">Представьтесь<span class="review-form__title review-form__title--visually-hidden">, пожалуйста</span>:</h2>
               <div class="review-form__group">
                 <label class="review-form__label" for="name">Имя:
                   <input class="review-form__input" type="text" name="name" id="name" placeholder="Петр">
@@ -50,10 +53,11 @@
             </div>
           </fieldset>
           <fieldset class="review-form__field">
-            <div class="review-form__wrapper">
-              <h2 class="review-form__title">Контактная информация:</h2>
-              <div class="review-form__group">
-                <label class="review-form__label review-form__label--column review-form__label--phone" for="phone">Контактный телефон:
+            <div class="review-form__wrapper review-form__wrapper--contacts">
+              <h2 class="review-form__title review-form__title--line">Контактная информация:</h2>
+              <div class="review-form__group review-form__group--contacts">
+                <label class="review-form__label review-form__label--column review-form__label--phone" for="phone">
+                  Контактный телефон:
                   <input class="review-form__input-contacts" type="phone" name="phone" id="phone" placeholder="Введите телефон">
                 </label>
                 <small class="review-form__phone-error review-form__phone-error--visually-hidden">Ошибка, перепроверьте номер</small>
@@ -64,22 +68,22 @@
             </div>
           </fieldset>
           <fieldset class="review-form__field review-form__field--feels">
-            <div class="review-form__wrapper">
-              <h2 class="review-form__title">Ваше общее впечатление:</h2>
+            <div class="review-form__wrapper review-form__wrapper--left">
+              <h2 class="review-form__title  review-form__title--left review-form__title--desktop-impress">Ваше общее впечатление:</h2>
               <div class="review-form__group">
                 <input class="review-form__input-radio" type="radio" name="impress" value="impress-good" id="impress-good" checked>
                 <label class="review-form__label-radio"  for="impress-good">Скорее положительное</label>
                 <input class="review-form__input-radio" type="radio" name="impress" value="impress-bad" id="impress-bad">
-                <label class="review-form__label-radio"  for="impress-bad">Скорее положительное</label>
+                <label class="review-form__label-radio"  for="impress-bad">Скорее отрицательное</label>
                 <input class="review-form__input-radio" type="radio" name="impress" value="impress-dont-know" id="impress-dont-know">
                 <label class="review-form__label-radio"  for="impress-dont-know">Затрудняюсь ответить</label>
               </div>
             </div>
           </fieldset>
           <fieldset class="review-form__field">
-            <div class="review-form__wrapper">
-              <h2 class="review-form__title">Посещенные достопримечательности:</h2>
-              <div class="review-form__group">
+            <div class="review-form__wrapper review-form__wrapper--sights">
+              <h2 class="review-form__title review-form__title--line review-form__title--line-center">Посещенные<br class="wrap wrap--tablet wrap--desktop"> достопримечательности:</h2>
+              <div class="review-form__group review-form__group--sights">
                 <input class="review-form__input-check" type="checkbox" name="sight" value="Devils bridge" id="sight-1" checked>
                 <label class="review-form__label-check"  for="sight-1">Мост Дьявола</label>
                 <input class="review-form__input-check" type="checkbox" name="sight" value="Slide park" id="sight-2" checked>
@@ -92,17 +96,18 @@
             </div>
           </fieldset>
           <fieldset class="review-form__field">
-            <div class="review-form__wrapper">
-              <h2 class="review-form__title">Опишите свои эмоции:</h2>
+            <div class="review-form__wrapper review-form__wrapper--text-area">
+              <h2 class="review-form__title review-form__title--line">Опишите свои эмоции:</h2>
               <textarea class="review-form__text-area" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
             </div>
           </fieldset>
             <div class="review-form__footer">
               <button class="review-form__btn btn" type="submit" name="send-form-button">Отправить отзыв</button>
+              <small class="review-form__legend"><sup>*</sup> — обязательные поля</small>
             </div>
         </form>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer page-footer--form">
         <b class="hash-tag">#visitsedona</b>
         <div class="social">
           <a class="social-link social-link--tw" href="#"></a>
@@ -110,8 +115,10 @@
           <a class="social-link social-link--yt" href="#"></a>
         </div>
         <p class="copyright">
-          Разработано:
-          <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+          Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__icon" src="img/htmlacademy.svg" alt="">
+          </a>
         </p>
       </footer>
     </div>

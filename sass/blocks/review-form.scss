@@ -9,15 +9,23 @@
 .review-form__field {
   padding: 0;
   margin: 0;
-  padding-top: 10px;
   width: 100%;
   border: none;
   border-top: 1px solid #e5e5e5;
   @media #{$tablet} {
     border: none;
+    position: relative;
   &--feels {
   order: -1;
   width: 50%;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;
+    height: 292px;
+    border-left: 1px solid #dbdbdb;
+  }
   }
   &--name {
   width: 50%;
@@ -27,16 +35,74 @@
 .review-form__group {
   display: flex;
   flex-wrap: wrap;
-    @media #{$desktop} {
-      justify-content: space-between;
+  margin-top: 20px;
+  &--sights {
+    margin: 0;
+  }
+  @media #{$tablet} {
+    margin-top: 57px;
+    &--sights {
+      margin-top: 14px;
+      padding-left: 94px;
+      padding-right: 35px;
     }
+    &--contacts {
+      margin-top: 24px;
+    }
+  }
+  @media #{$desktop} {
+    justify-content: space-between;
+    &--contacts {
+      margin-top: 73px;
+    }
+    &--sights {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 .review-form__title
   {
-    margin-top: 0;
+    margin: 0;
     text-align: center;
     @include title($title-color);
     line-height: 26px;
+    @media #{$tablet} {
+      font-size: 21px;
+      &--left {
+      text-align: left;
+      }
+      &--line {
+        position: relative;
+        z-index: 2;
+        &::after {
+         content: "";
+         position: relative;
+         top: -12px;
+         z-index: 1;
+         display: block;
+         border-bottom: 1px solid #dbdbdb;
+        }
+      }
+      &--line-center {
+        &::after {
+        top: -27px;
+        }
+      }
+    }
+    @media #{$desktop} {
+    &--desktop-impress {
+      margin-left: 81px;
+    }
+    &--desktop-name{
+      margin-left: 0;
+    }
+   }
+    &--visually-hidden {
+        @media #{$tablet} and #{$tablet-max} {
+          display: none;
+        }
+    }
   }
 .review-form__label
   {
@@ -44,10 +110,12 @@
     display: flex;
     position: relative;
     align-items: center;
-    // margin-right: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     @include text($text-color);
     line-height: 26px;
+    &:first-child{
+      margin: 0;
+    }
   &--column {
     flex-direction: column;
     margin: 0;
@@ -58,7 +126,7 @@
   &--phone,&--email {
     align-items: flex-start;
     @media #{$desktop} {
-      width: 41.66666666666667%;
+    align-items: center;
     }
     &::after {
       position: absolute;
@@ -72,31 +140,78 @@
       background-position: center;
     }
   }
-  // &--phone:only-of-type {
-  //   margin-right: 20px;
-  // }
   &--phone {
+    @media #{$desktop} {
+      width: calc(400/960*100%);
+    }
     &::after {
       background-image: url("../img/icon-phone.svg");
 
     }
   }
   &--email {
-    // margin: 25px 0;
+    margin-top: 10px;
+    @media #{$tablet} {
+      margin-top: 20px;
+    }
+    @media #{$desktop} {
+      width: calc(480/960*100%);
+      margin-top: 0;
+    }
     &::after {
       bottom: 0;
       background-image: url("../img/icon-mail.svg");
     }
   }
+  &--visually-hidden {
+    @media #{$desktop} {
+      display: none;
+    }
+  }
 }
   .review-form__wrapper {
-    padding: 0 20px 25px 20px;
+    padding: 18px 20px 25px 20px;
     @media #{$tablet} {
       padding: 0 60px 70px 60px;
+      position: relative;
+      &--contacts {
+      padding-bottom: 52px;
+      }
+      &--right {
+        padding-left: 0;
+      }
+      &--left {
+        padding-right: 0;
+      }
+      &--text-area {
+        padding-bottom: 30px;
+      }
+      &--name {
+        padding-left: 58px;
+      }
     }
     @media #{$desktop} {
-      padding: 0 120px 70px 120px;
+      padding: 0 120px 65px 120px;
+      &--contacts {
+      padding-bottom: 52px;
+      }
+      &--text-area {
+        padding-bottom: 26px;
+      }
+      &--name {
+        padding-left: 80px;
+      }
     }
+    &--sights {
+      padding-bottom: 18px;
+      @media #{$tablet} {
+        padding-bottom: 67px;
+      }
+      @media #{$desktop} {
+        padding-bottom: 65px;
+      }
+    }
+
   }
   .review-form__input {
    width: 100%;
@@ -113,7 +228,7 @@
   .review-form__input-contacts {
     width: 100%;
     box-sizing: border-box;
-    margin: 0;
+    margin: 9px 0 0 0;
     height: 58px;
     padding: 0 60px 0 22px;
     background-color: #f2f2f2;
@@ -122,12 +237,29 @@
     font-size: 18px;
     color: #000000;
     line-height: 26px;
+    @media #{$desktop} {
+      width: 314px;
+      margin-top: 0;
+      margin-left: 22px;
+    }
   }
   .review-form__phone-error {
-    color: red;
+    margin-top: 4px;
+    margin-left: 21px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #ff5c5c;
+    @media #{$tablet} {
+      position: absolute;
+      margin: 0;
+      top: 50px;
+      right: 61px;
+    }
     @media #{$desktop} {
+      top: 66px;
+      left: 227px;
       &--visually-hidden {
-        display: none;
+        // display: none;
       }
     }
   }
@@ -140,6 +272,32 @@
     padding-left: 77px;
     width: 100%;
     position: relative;
+  }
+  .review-form__label-radio {
+      @include title($text-color);
+      text-transform: none;
+      padding-top: 26px;
+      padding-bottom: 19px;
+      &:first-of-type {
+        padding-top: 19px;
+        padding-bottom: 19px;
+      }
+      @media #{$tablet} {
+        padding-top: 33px;
+      }
+      @media #{$desktop} {
+        padding-top: 35px;
+      }
+  }
+  .review-form__label-check {
+      @include title($text-color);
+      text-transform: none;
+      padding-top: 32px;
+      padding-bottom: 24px;
+      @media #{$tablet} {
+      padding-top: 43px;
+      padding-bottom: 20px;
+    }
   }
   .review-form__input-radio + .review-form__label-radio::before {
     display: block;
@@ -175,15 +333,25 @@
   border-radius: 10%;
   background-color: #e6e6e6;
 }
-.review-form__input-check:checked + .review-form__label-check::before {
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.review-form__input-check:checked + .review-form__label-check::after {
+  // background-image: url("../img/icon-tick.svg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  position: absolute;
+  width: 17px;
+  height: 9px;
+  left: 18px;
+  bottom: 26px;
+  transform: rotate(-45deg);
+  content: "";
+  border-left: 3px solid #000000;
+  border-bottom: 3px solid #000000;
 }
 .review-form__text-area {
   width: 100%;
   height: 160px;
-  padding: 20px;
+  padding: 16px 20px;
+  margin-top: 15px;
   box-sizing: border-box;
   border: none;
   font-family: "PTSans", "Arial", sans-serif;
@@ -192,45 +360,61 @@
   color: #000000;
   line-height: 26px;
   background-color: #e6e6e6;
+  @media #{$tablet} {
+    margin-top: 57px;
+  }
 }
 .review-form__label-check {
   @media #{$tablet} {
     width: 50%;
     box-sizing: border-box;
+    &:nth-of-type(2) {
+      order: 2;
+    }
+    &:nth-of-type(3) {
+      order: 1;
+    }
+  &:nth-of-type(4) {
+      order: 3;
+    }
   }
   @media #{$desktop} {
-    width:25%;
+    width: 20.83%;
     box-sizing: border-box;
-  }
-}
-@media #{$tablet} {
-  .review-form__label-check:nth-of-type(2) {
-    order: 2;
-  }
-  .review-form__label-check:nth-of-type(3) {
-    order: 1;
-  }
-  .review-form__label-check:nth-of-type(4) {
-    order: 3;
+
+    &:last-of-type {
+      // margin-right: -54px;
+      }
   }
 }
 .review-form__footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 20px 0 20px;
+  padding: 27px 20px 0 20px;
   box-sizing: border-box;
   @media #{$tablet} {
-    padding: 0 60px 0 60px;
+    padding: 27px 60px 0 60px;
+    justify-content: space-between;
+    align-items: center;
   }
   @media #{$desktop} {
-    padding: 0 120px 70px 120px;
-    justify-content: flex-start;
+    padding: 28px 120px 70px 120px;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .review-form__btn {
   @media #{$tablet} {
     width: 50%;
   }
-  // margin-top: 51px;
+}
+.review-form__legend {
+    @media #{$only-mobile} {
+      display: none;
+    }
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #333333;
 }
