@@ -6,6 +6,7 @@
     @media #{$tablet} {
       // display: table;
       flex-direction: row;
+      justify-content: space-between;
     }
   }
 .advantages__item {
@@ -21,8 +22,8 @@
         }
       }
       &:last-child {
-        padding-top: 30px;
-        padding-bottom: 37px;
+        padding-top: 27px;
+        padding-bottom: 40px;
         &>.advantages__icon {
           top: 24px;
           left: 19px;
@@ -35,12 +36,13 @@
     @media #{$tablet} {
       display: flex;
       flex-direction: column;
-      padding: 61px 60px 41px 42px;
+      width: 256px;
+      padding: 57px 45px 62px 45px;
       text-align: center;
       box-sizing: border-box;
       &:nth-child(2){
         order: 1;
-        padding: 61px 51px 41px 42px;
+        // padding: 61px 51px 41px 42px;
       }
     }
     @media #{$desktop} {
@@ -69,6 +71,7 @@
     margin: 0;
     margin-bottom: 14px;
     @include title($title-color);
+    font-size: 21px;
     line-height: 26px;
     @media #{$tablet} {
       margin: 0;

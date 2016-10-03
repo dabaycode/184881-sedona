@@ -56,6 +56,7 @@
       margin-top: 73px;
     }
     &--sights {
+      margin-top: 12px;
       padding-left: 0;
       padding-right: 0;
     }
@@ -69,24 +70,42 @@
     line-height: 26px;
     @media #{$tablet} {
       font-size: 21px;
+      &--sights {
+        padding: 0 155px 0;
+      }
       &--left {
       text-align: left;
       }
       &--line {
         position: relative;
-        z-index: 2;
         &::after {
          content: "";
-         position: relative;
-         top: -12px;
-         z-index: 1;
-         display: block;
+         position: absolute;
+         top: 13px;
+         left: 0;
          border-bottom: 1px solid #dbdbdb;
+         width: 125px;
+        }
+        &::before {
+         content: "";
+         position: absolute;
+         top: 13px;
+         right: 0;
+         border-bottom: 1px solid #dbdbdb;
+         width: 125px;
         }
       }
       &--line-center {
-        &::after {
-        top: -27px;
+        &::after, &::before {
+        top: 27px;
+        }
+      }
+      @media #{$desktop} {
+        &::after, &::before {
+        width: 280px;
+        }
+        &--sights {
+          padding: 0 300px 0;
         }
       }
     }
@@ -169,6 +188,17 @@
     }
   }
 }
+  .review-form__label-title {
+    margin-left: 22px;
+    @media #{$desktop} {
+        margin-left: 0;
+    }
+    &--hidden {
+        @media #{$desktop} {
+          display: none;
+      }
+    }
+  }
   .review-form__wrapper {
     padding: 18px 20px 25px 20px;
     @media #{$tablet} {
@@ -224,11 +254,18 @@
    font-size: 18px;
    color: #000000;
    line-height: 26px;
+   &:hover {
+     background-color: #e5e5e5;
+   }
+   &:focus {
+     box-shadow: inset 0px 0px 0px 4px rgba(229,229,229,1);
+     background-color: #ffffff;
+   }
   }
   .review-form__input-contacts {
     width: 100%;
     box-sizing: border-box;
-    margin: 9px 0 0 0;
+    // margin: 9px 0 0 0;
     height: 58px;
     padding: 0 60px 0 22px;
     background-color: #f2f2f2;
@@ -237,6 +274,13 @@
     font-size: 18px;
     color: #000000;
     line-height: 26px;
+    &:hover {
+      background-color: #e5e5e5;
+    }
+    &:focus {
+      box-shadow: inset 0px 0px 0px 4px rgba(229,229,229,1);
+      background-color: #ffffff;
+    }
     @media #{$desktop} {
       width: 314px;
       margin-top: 0;
@@ -269,7 +313,7 @@
   .review-form__label-radio, .review-form__label-check {
     padding-bottom: 20px;
     padding-top: 25px;
-    padding-left: 77px;
+    padding-left: 80px;
     width: 100%;
     position: relative;
   }
@@ -289,16 +333,7 @@
         padding-top: 35px;
       }
   }
-  .review-form__label-check {
-      @include title($text-color);
-      text-transform: none;
-      padding-top: 32px;
-      padding-bottom: 24px;
-      @media #{$tablet} {
-      padding-top: 43px;
-      padding-bottom: 20px;
-    }
-  }
+
   .review-form__input-radio + .review-form__label-radio::before {
     display: block;
     position: absolute;
@@ -309,11 +344,17 @@
     content: "";
     border-radius: 50%;
     background-color: #e6e6e6;
+    &:hover {
+      background-color: #e5e5e5;
+    }
+    &:active {
+      background-color: #d5d5d5;
+    }
   }
 .review-form__input-radio:checked + .review-form__label-radio::after {
   display: block;
   position: absolute;
-  left: 18px;
+  left: 17px;
   bottom: 18px;
   width: 22px;
   height: 22px;
@@ -327,16 +368,19 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 58px;
-  height: 58px;
+  width: 56px;
+  height: 56px;
   content: "";
   border-radius: 10%;
   background-color: #e6e6e6;
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  &:active {
+    background-color: #d5d5d5;
+  }
 }
 .review-form__input-check:checked + .review-form__label-check::after {
-  // background-image: url("../img/icon-tick.svg");
-  // background-repeat: no-repeat;
-  // background-position: center;
   position: absolute;
   width: 17px;
   height: 9px;
@@ -365,9 +409,14 @@
   }
 }
 .review-form__label-check {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
   @media #{$tablet} {
     width: 50%;
     box-sizing: border-box;
+    padding-top: 42px;
+    padding-bottom: 20px;
     &:nth-of-type(2) {
       order: 2;
     }
@@ -379,12 +428,14 @@
     }
   }
   @media #{$desktop} {
-    width: 20.83%;
+    width: 205px;
     box-sizing: border-box;
-
-    &:last-of-type {
-      // margin-right: -54px;
-      }
+    &:nth-of-type(1) {
+      margin-right: 22px;
+    }
+    &:nth-of-type(3) {
+      margin-right: 21px;
+    }
   }
 }
 .review-form__footer {
@@ -399,7 +450,7 @@
     align-items: center;
   }
   @media #{$desktop} {
-    padding: 28px 120px 70px 120px;
+    padding: 32px 120px 70px 120px;
     justify-content: space-between;
     align-items: center;
   }

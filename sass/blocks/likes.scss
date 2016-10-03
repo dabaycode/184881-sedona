@@ -1,21 +1,30 @@
 @import "../mixin";
 @import "../variables";
 .likes {
-  margin: 0;
-  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
   @media #{$tablet} {
-      position: absolute;
-      top: 28px;
-      right: 30px;
+  margin: 0;
+  }
+}
+.likes__icon {
+  width: 23px;
+  height: 21px;
+  @media #{$tablet} {
+    fill: #a9a9a9;
+  }
+  @media #{$desktop} {
+    fill: #ffffff;
   }
 }
 .likes__count {
-  margin-left: 10px;
+  margin-left: 14px;
   @include text(#000000);
   font-weight: $bold;
   line-height: 24px;
   @media #{$tablet} {
-    margin-left: 4px;
+    margin-left: 10px;
   }
   @media #{$desktop} {
     color: #ffffff;

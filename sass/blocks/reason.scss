@@ -8,6 +8,9 @@
     @media #{$tablet} {
       font-size: 21px;
     }
+    @media #{$desktop} {
+      padding: 0 70px 0;
+    }
   }
 .reason__text, .reason__number {
     @include text($text-color);
@@ -36,15 +39,15 @@
     &--blue {
       background-color: #81b3d2;
       color: #ffffff;
-      padding-top: 39px;
+      padding-top: 54px;
       padding-bottom: 42px;
       @media #{$tablet} {
         box-sizing: border-box;
-        padding: 44px 35px 41px 35px;
-        width: 33%;
+        padding: 44px 35px 41px;
+        width: 33.34%;
         }
       @media #{$desktop} {
-        padding-top: 51px;
+        padding: 51px 35px 41px;
       }
     }
     &--grey {
@@ -54,10 +57,8 @@
         border-bottom: 1px solid rgba(0,0,0,0.1);
       }
       @media #{$tablet} {
-        // display: table-cell;
         width: calc(100%/3);
-        padding-bottom: 45px;
-        padding-top: 43px;
+        padding: 43px 50px 45px;
       }
       @media #{$desktop} {
         padding-bottom: 67px;
@@ -69,8 +70,13 @@
       }
     }
     &--right{
+      padding-top: 37px;
       @media #{$tablet} {
       order: 1;
+      padding-top: 44px;
+      }
+      @media #{$desktop} {
+      padding-top: 51px;
       }
     }
   }

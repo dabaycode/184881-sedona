@@ -14,6 +14,17 @@
   @include title($btn-text-color);
   background-color: $btn-color;
   line-height: $btn-height;
+  &:hover {
+    background-color: $btn-color-hvr;
+  }
+  &:active {
+    background-color: $btn-color-active;
+    color: $btn-text-color-active;
+  }
+  &:disabled {
+    background-color: $btn-color-disabled;
+    color: $btn-text-color-disabled;
+  }
 }
 .header-toogle__btn {
   position: absolute;

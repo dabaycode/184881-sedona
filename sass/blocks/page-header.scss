@@ -15,4 +15,7 @@
     @media #{$tablet} {
       top: 0;
     }
+    @media #{$desktop} {
+    @include horizont-center(187px);
+    }
   }

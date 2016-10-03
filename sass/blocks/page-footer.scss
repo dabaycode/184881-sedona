@@ -1,7 +1,7 @@
 @import "../variables";
 .page-footer {
   // width: 100%;
-  padding-top: 34px;
+  padding-top: 30px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -11,19 +11,22 @@
   }
   @media #{$tablet} {
     &--form {
-      padding-top: 91px;
+      padding-top: 96px;
     }
     &.page-footer--gallery {
       padding-top: 115px;
     }
     flex-direction: row;
-    padding: 30px 60px 30px 60px;
+    padding: 31px 60px 30px 60px;
     align-items: center;
   }
     @media #{$desktop} {
     padding: 30px 127px 31px 132px;
+    &.page-footer--gallery {
+      padding-top: 121px;
+    }
     &--form {
-        padding-top: 26px;
+        padding-top: 32px;
     }
 }
 }
