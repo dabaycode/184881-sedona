@@ -1,6 +1,14 @@
 @import "../mixin";
 @import "variables";
 .main-nav {
+  &--nojs {
+    display: block;
+  }
+  @media #{$only-mobile} {
+    &--closed {
+      display: none;
+    }
+  }
   @media #{$tablet} {
     position: relative;
     width: 100%;

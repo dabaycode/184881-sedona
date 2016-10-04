@@ -23,7 +23,7 @@
     </svg>
     <div class="container">
       <header class="page-header">
-        <nav class="main-nav main-nav--close main-nav--nojs">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="index.html">Главная</a></li>
             <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
@@ -38,7 +38,7 @@
               <img src="img/logo-sedona-mobile.svg" alt="Sedona" >
             </picture>
           </a>
-          <button class="header-toogle__btn header-toogle__btn--close" type="button">Закрыть меню</button>
+          <button class="header-toogle__btn header-toogle__btn--open header-toogle__btn--nojs" type="button">Закрыть меню</button>
         </div>
       </header>
       <div class="page-promo">
@@ -148,6 +148,26 @@
         </div>
       </footer>
     </div>
+    <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.header-toogle__btn');
+    navMain.classList.remove('main-nav--nojs');
+    navToggle.classList.remove('header-toogle__btn--nojs');
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+        navToggle.classList.remove('header-toogle__btn--open');
+        navToggle.classList.add('header-toogle__btn--close');
+      }
+      else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+        navToggle.classList.remove('header-toogle__btn--close');
+        navToggle.classList.add('header-toogle__btn--open');
+     }
+    });
+    </script>
   </body>
   <div class="failure-pop-up failure-pop-up--hidden">
     <b class="failure-pop-up__title">Что-то пошло не так!</b>
