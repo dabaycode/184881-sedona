@@ -1,6 +1,15 @@
 .social {
     margin-top: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   @media #{$tablet} {
-     margin-top: 6px;
+     margin-top: 0;
+     margin-left: -12px;
   }
+}
+.social__icon {
+  width: 18px;
+  height: 14px;
+  fill: #ffffff;
 }

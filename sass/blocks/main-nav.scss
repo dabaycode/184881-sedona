@@ -1,6 +1,14 @@
 @import "../mixin";
 @import "variables";
 .main-nav {
+  &--nojs {
+    display: block;
+  }
+  @media #{$only-mobile} {
+    &--closed {
+      display: none;
+    }
+  }
   @media #{$tablet} {
     position: relative;
     width: 100%;
@@ -16,6 +24,26 @@
     text-transform: uppercase;
     background-color: #81b3d2;
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.2), inset 0px -1px 0px 0px rgba(0,0,0,0.2);
+    &:hover {
+      @media #{$only-mobile} {
+        background-color: #669ec0;
+      }
+    }
+    &:active {
+      @media #{$only-mobile} {
+        background-color: #5496bd;
+      }
+    }
+    & a:hover {
+      @media #{$tablet} {
+      color: #81b3d2;
+      }
+    }
+    & a:active {
+      @media #{$tablet} {
+      color: #cacaca;
+    }
+    }
     &:first-of-type {
     box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.2), inset 0px -1px 0px 0px rgba(0,0,0,0.2);
     @media #{$tablet} {
@@ -34,19 +62,30 @@
       &:nth-child(3) {
         margin-left: auto;
       }
-
-      // &:nth-of-type(n+1):nth-of-type(-n+2) {
-      //   float: left;
-      // }
-      // &:nth-of-type(n+3):nth-of-type(n) {
-      //   float: right;
-      // }
       background-color: transparent;
     }
     a {
       color: #ffffff;
       @media #{$tablet} {
         color: #000000;
+      }
+    }
+    &--active a {
+      @media #{$tablet} {
+        color: #766357;
+      }
+    }
+    &--active a:hover {
+      @media #{$tablet} {
+        color: #604e43;
+      }
+    }
+    &--active a:active {
+      @media #{$only-mobile} {
+        opacity: 0.3;
+      }
+      @media #{$tablet} {
+        color: #dbd8d5;
       }
     }
   }

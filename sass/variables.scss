@@ -9,10 +9,16 @@ $text-color: #333333;
 // Buttons
 $btn-color: #81b3d2;
 $btn-text-color: #ffffff;
+$btn-color-hvr: #669ec0;
+$btn-color-active: #5496bd;
+$btn-text-color-active: #94b9d2;
+$btn-color-disabled: #e5e5e5;
+$btn-text-color-disabled: #ffffff;
 $btn-width: 280px;
 $btn-height: 58px;
 
 // Widths
-$only-mobile: "(max-width: 768px)";
+$only-mobile: "(max-width: 767px)";
 $tablet: "(min-width: 768px)";
+$tablet-max: "(max-width: 1199px)";
 $desktop: "(min-width: 1200px)";

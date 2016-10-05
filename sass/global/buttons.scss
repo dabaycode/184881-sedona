@@ -14,6 +14,17 @@
   @include title($btn-text-color);
   background-color: $btn-color;
   line-height: $btn-height;
+  &:hover {
+    background-color: $btn-color-hvr;
+  }
+  &:active {
+    background-color: $btn-color-active;
+    color: $btn-text-color-active;
+  }
+  &:disabled {
+    background-color: $btn-color-disabled;
+    color: $btn-text-color-disabled;
+  }
 }
 .header-toogle__btn {
   position: absolute;
@@ -26,6 +37,7 @@
   border: none;
   width: 0;
   height: 0;
+  &--close {
   &::before,
   &::after {
     content: "";
@@ -50,7 +62,59 @@
   @media #{$tablet} {
     display: none;
   }
-  @media #{$desktop} {
+}
+  &--open {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 23px;
+    height: 5px;
+    background-color: #81b3d2;
+    border-top: 1px solid #c0d9e8;
+    border-bottom: 1px solid #c0d9e8;
+   &::before, &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 23px;
+    height: 4px;
+    background-color: #81b3d2;
+  }
+    &::before {
+      top: -8px;
+    }
+     &::after {
+       top: 7px;
+     }
+   @media #{$tablet} {
+     display: none;
+   }
+  }
+  &--nojs {
     display: none;
   }
-}
+ }
+ .pop-up-close-button {
+   width: 180px;
+   margin-left: -90px;
+   position: absolute;
+   position: relative;
+   left: 50%;
+   margin-top: 25px;
+   &--success {
+     position: static;
+     margin: 0;
+     width: 100%;
+   }
+   @media #{$tablet} {
+     width: 270px;
+     margin-left: -135px;
+     margin-top: 30px;
+   }
+   &--success {
+     position: static;
+     margin: 0;
+     width: 100%;
+   }
+ }

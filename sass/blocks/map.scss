@@ -1,6 +1,16 @@
 .map {
-  display: flex;
-  img {
-    width: 100%;
-  }
+  position: relative;
+}
+.map__img {
+  width: 100%;
+}
+.map__marker {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin-top: -13.5px;
+  margin-left: -13.5px;
+  width: 27px;
+  height: 27px;
 }

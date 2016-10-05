@@ -1,8 +1,109 @@
 .video-controls {
+  height: 111px;
+  position: absolute;
+  bottom: -61px;
+  left: 20px;
+  right: 20px;
+
   @media #{$tablet} {
-    position: relative;
-    bottom: 93px;
-    min-height: 93px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 93px;
+    width: 100%;
     background-color: rgba(0,0,0,0.6);
+  }
+}
+.video-controls__main {
+  display: flex;
+  height: 66px;
+  align-items: center;
+  background-color: #eeeeee;
+  @media #{$tablet} {
+    position: absolute;
+    width: 100%;
+    top: 15px;
+    background: none;
+  }
+}
+.video-controls__volume {
+  height: 45px;
+  background-color: rgba(0,0,0,0.6);
+    @media #{$tablet} {
+      background: none;
+      padding: 0;
+      position: relative;
+      top: 22px;
+    }
+}
+.video-controls__volume-scale {
+  position: relative;
+  top: 22.5px;
+  height: 0;
+  margin: 0 23px;
+  border-top: 3px solid rgba(255,255,255,0.2);
+  @media #{$tablet} {
+    width: 59.87%;
+    margin-left: 93px;
+    margin-right: 167px;
+  }
+  @media #{$desktop} {
+    width: 67.375%;
+    margin-left: 93px;
+    margin-right: 167px;
+  }
+}
+.video-controls__volume-slider {
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-left: 23px;
+  @media #{$tablet} {
+    left: 182px;
+  }
+}
+.icon-video {
+  fill: #5c6870;
+  &:hover {
+    fill: #333333;
+  }
+  &:active {
+    fill: #c1c1c1;
+  }
+  @media #{$tablet} {
+    fill: #ffffff;
+  }
+}
+.icon-video__replay {
+  width: 16px;
+  height: 20px;
+}
+.icon-video__subtitles {
+  width: 32px;
+  height: 20px;
+}
+.icon-video__size {
+  width: 20px;
+  height: 20px;
+}
+.video-controls__replay {
+  margin-left: 25px;
+  @media #{$tablet} {
+    margin-left: 35px;
+  }
+}
+.video-controls__subtitles {
+  margin-left: auto;
+  margin-right: 31px;
+}
+.video-controls__size {
+  margin-right: 23px;
+  @media #{$tablet} {
+    margin-right: 42px;
   }
 }
