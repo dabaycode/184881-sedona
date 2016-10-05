@@ -101,4 +101,20 @@
    position: absolute;
    position: relative;
    left: 50%;
+   margin-top: 25px;
+   &--success {
+     position: static;
+     margin: 0;
+     width: 100%;
+   }
+   @media #{$tablet} {
+     width: 270px;
+     margin-left: -135px;
+     margin-top: 30px;
+   }
+   &--success {
+     position: static;
+     margin: 0;
+     width: 100%;
+   }
  }

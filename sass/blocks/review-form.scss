@@ -280,6 +280,7 @@
     &:focus {
       box-shadow: inset 0px 0px 0px 4px rgba(229,229,229,1);
       background-color: #ffffff;
+      background: none;
     }
     @media #{$desktop} {
       width: 314px;
