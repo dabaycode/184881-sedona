@@ -26,28 +26,28 @@ a {
   }
 }
 .wrap {
+  &-mobile {
+    @media #{$tablet} {
+      display: none;
+    }
+    @media #{$desktop} {
+      display: none;
+    }
+  }
+  &-tablet {
+    @media #{$only-mobile} {
+      display: none;
+    }
+    @media #{$desktop} {
+      display: none;
+    }
+  }
+  &-desktop {
   @media #{$only-mobile} {
-    &--mobile {
-      display: inline;
-    }
-    &--tablet, &--desktop {
-      display: none;
-    }
+    display: none;
   }
-  @media #{$tablet} and #{$tablet-max}  {
-    &--tablet {
-      display: inline !important;
-    }
-    &--mobile, &--desktop  {
-      display: none;
-    }
+  @media #{$tablet} {
+    display: none;
   }
-  @media #{$desktop} {
-    &--desktop {
-      display: inline !important;
-    }
-  &--mobile, &--tablet  {
-      display: none;
-    }
-  }
+ }
 }
