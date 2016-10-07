@@ -346,12 +346,13 @@
     border-radius: 50%;
     background-color: #e6e6e6;
   }
-  .review-form__input-radio:active + .review-form__label-radio::before {
-      background-color: #d5d5d5;
-    }
- .review-form__input-radio:hover ~ .review-form__label-radio::before {
-    background-color: #e5e5e5;
+
+ .review-form__input-radio:hover + .review-form__label-radio::before {
+    background-color: red;
   }
+  .review-form__input-radio:active + .review-form__label-radio::before {
+      background-color: green;
+    }
 .review-form__input-radio:checked + .review-form__label-radio::after {
   display: block;
   position: absolute;
@@ -378,7 +379,7 @@
 .review-form__input-check:hover ~ .review-form__label-check::before {
     background-color: #e5e5e5;
   }
-  .review-form__input-check:active + .review-form__label-check::before {
+.review-form__input-check:active + .review-form__label-check::before {
     background-color: #d5d5d5;
   }
 .review-form__input-check:checked + .review-form__label-check::after {
