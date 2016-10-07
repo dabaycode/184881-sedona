@@ -10,12 +10,20 @@
   }
 .page-header__logo {
     position: absolute;
-    @include horizont-center(102px);
+    @include horizont-center;
     z-index: 1;
+    img {
+      width: 102px;
+      height: 84px;
+    }
     @media #{$tablet} {
       top: 0;
     }
     @media #{$desktop} {
-    @include horizont-center(187px);
+    @include horizont-center;
+    img {
+      width: 187px;
+      height: 96px;
+    }
     }
   }

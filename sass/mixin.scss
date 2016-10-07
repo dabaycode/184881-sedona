@@ -4,9 +4,9 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-@mixin horizont-center($width) {
+@mixin horizont-center {
   left: 50%;
-  margin-left: -$width/2;
+  transform: translateX(-50%);
 }
 @mixin title($title-color) {
   font-weight: $bold;

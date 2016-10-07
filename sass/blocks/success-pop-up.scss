@@ -5,8 +5,7 @@
   height: 324px;
   position: fixed;
   top: 20%;
-  left: 50%;
-  margin-left: -160px;
+  @include horizont-center;
   box-sizing: border-box;
   background-color: #ffffff;
   text-align: center;
@@ -15,7 +14,6 @@
     width: 638px;
     height: 347px;
     top: 10%;
-    margin-left: -319px;
   }
   &--hidden{
     display: none;

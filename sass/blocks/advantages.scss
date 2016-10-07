@@ -37,17 +37,20 @@
       display: flex;
       flex-direction: column;
       width: 256px;
-      padding: 57px 45px 62px 45px;
+      padding: 57px 45px 62px;
       text-align: center;
       box-sizing: border-box;
-      &:nth-child(2){
+      &:nth-child(2) {
         order: 1;
-        // padding: 61px 51px 41px 42px;
+
+      }
+      &:last-child .advantages__text {
+        padding: 0 5px;
       }
     }
     @media #{$desktop} {
      width: calc(100%/3);
-     padding: 61px 39px 82px 37px;
+     padding: 61px 50px 82px;
      &:nth-child(2){
        order: 1;
        padding: 61px 48px 0 48px;

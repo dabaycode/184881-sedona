@@ -200,9 +200,9 @@
     }
   }
   .review-form__wrapper {
-    padding: 18px 20px 25px 20px;
+    padding: 18px 20px 26px;
     @media #{$tablet} {
-      padding: 0 60px 70px 60px;
+      padding: 0 60px 70px;
       position: relative;
       &--contacts {
       padding-bottom: 52px;
@@ -233,7 +233,7 @@
       }
     }
     &--sights {
-      padding-bottom: 18px;
+      padding-bottom: 23px;
       @media #{$tablet} {
         padding-bottom: 67px;
       }
@@ -265,9 +265,9 @@
   .review-form__input-contacts {
     width: 100%;
     box-sizing: border-box;
-    // margin: 9px 0 0 0;
     height: 58px;
     padding: 0 60px 0 22px;
+    margin-top: 8px;
     background-color: #f2f2f2;
     border: none;
     font-weight: $bold;
@@ -345,12 +345,12 @@
     content: "";
     border-radius: 50%;
     background-color: #e6e6e6;
-    &:hover {
-      background-color: #e5e5e5;
-    }
-    &:active {
+  }
+  .review-form__input-radio:active + .review-form__label-radio::before {
       background-color: #d5d5d5;
     }
+ .review-form__input-radio:hover ~ .review-form__label-radio::before {
+    background-color: #e5e5e5;
   }
 .review-form__input-radio:checked + .review-form__label-radio::after {
   display: block;
@@ -374,13 +374,13 @@
   content: "";
   border-radius: 10%;
   background-color: #e6e6e6;
-  &:hover {
+}
+.review-form__input-check:hover ~ .review-form__label-check::before {
     background-color: #e5e5e5;
   }
-  &:active {
+  .review-form__input-check:active + .review-form__label-check::before {
     background-color: #d5d5d5;
   }
-}
 .review-form__input-check:checked + .review-form__label-check::after {
   position: absolute;
   width: 17px;
@@ -413,11 +413,18 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  padding-top: 34px;
+  &:first-of-type {
+    padding-top: 29px;
+  }
   @media #{$tablet} {
     width: 50%;
     box-sizing: border-box;
     padding-top: 42px;
     padding-bottom: 20px;
+    &:first-of-type {
+      padding-top: 42px;
+    }
     &:nth-of-type(2) {
       order: 2;
     }

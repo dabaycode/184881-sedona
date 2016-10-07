@@ -5,8 +5,7 @@
   height: 280px;
   position: fixed;
   top: 20%;
-  left: 50%;
-  margin-left: -160px;
+  @include horizont-center;
   padding: 45px 45px 0;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -17,7 +16,6 @@
     height: 347px;
     padding: 60px 60px 0;
     top: 10%;
-    margin-left: -200px;
   }
   &--hidden{
     display: none;

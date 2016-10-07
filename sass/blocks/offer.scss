@@ -55,9 +55,13 @@
     padding: 0 20px;
     &--gallery {
       margin-top: 26px;
+      padding: 0 25px;
     }
     @media #{$tablet} {
      margin-top: 31px;
+     padding: 0 110px;
+    }
+    @media #{$desktop} {
      padding: 0 380px;
     }
   }

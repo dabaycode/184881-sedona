@@ -8,5 +8,8 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+    .reason--grey:nth-of-type(2) .reason__text {
+      padding: 0 10px;
+    }
   }
 }

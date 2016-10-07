@@ -30,15 +30,9 @@ a {
     @media #{$tablet} {
       display: none;
     }
-    @media #{$desktop} {
-      display: none;
-    }
   }
   &-tablet {
     @media #{$only-mobile} {
-      display: none;
-    }
-    @media #{$desktop} {
       display: none;
     }
   }
@@ -46,7 +40,7 @@ a {
   @media #{$only-mobile} {
     display: none;
   }
-  @media #{$tablet} {
+  @media #{$tablet} and #{$tablet-max}  {
     display: none;
   }
  }
