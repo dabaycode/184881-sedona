@@ -1,10 +1,10 @@
 @import "../mixin";
 @import "variables";
 .main-nav {
-  &--nojs {
-    display: block;
-  }
   @media #{$only-mobile} {
+    &--nojs {
+      display: block;
+    }
     &--closed {
       display: none;
     }

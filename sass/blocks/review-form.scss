@@ -78,8 +78,7 @@
   align-items: center;
   margin-top: 20px;
 }
-.review-form__title
-  {
+.review-form__title {
     margin: 0;
     text-align: center;
     @include title($title-color);
@@ -139,8 +138,7 @@
       }
     }
   }
-.review-form__label
-  {
+.review-form__label {
     width: 100%;
     display: flex;
     position: relative;
@@ -346,7 +344,7 @@
       padding-top: 35px;
     }
   }
-  .review-form__input-radio + .review-form__label-radio::before {
+ .review-form__label-radio::before {
     display: block;
     position: absolute;
     left: 0;
@@ -357,10 +355,10 @@
     border-radius: 50%;
     background-color: #f2f2f2;
   }
- .review-form__input-radio:hover + .review-form__label-radio::before {
+ .review-form__label-radio:hover::before {
     background-color: #e5e5e5;
   }
- .review-form__input-radio:active + .review-form__label-radio::before {
+ .review-form__input-radio:active::before {
     background-color: #d5d5d5;
   }
 .review-form__input-radio:checked + .review-form__label-radio::after {
@@ -377,7 +375,7 @@
 .review-form__input-radio:active + .review-form__label-radio::after {
   background-color: #a4a4a4;
 }
-.review-form__input-check + .review-form__label-check::before {
+.review-form__label-check::before {
   display: block;
   position: absolute;
   left: 0;
@@ -388,10 +386,10 @@
   border-radius: 10%;
   background-color: #f2f2f2;
 }
-.review-form__input-check:hover + .review-form__label-check::before {
+.review-form__label-check:hover::before {
   background-color: #e5e5e5;
 }
-.review-form__input-check:active + .review-form__label-check::before {
+.review-form__label-check:active::before {
   background-color: #d5d5d5;
 }
 .review-form__input-check:checked + .review-form__label-check::after {

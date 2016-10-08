@@ -5,6 +5,7 @@
 }
 .map__img {
   width: 100%;
+  height: auto;
   @media #{$desktop} {
     height: 350px;
   }
