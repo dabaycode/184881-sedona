@@ -38,67 +38,64 @@
   width: 23px;
   height: 22px;
   background-color: transparent;
-
   &::before {
-   content: "";
-   position: absolute;
-   right: 0;
-   top: 9px;
-   width: 23px;
-   height: 4px;
-   box-shadow: 0 7px #81b3d2,0 -7px #81b3d2;
-   background-color: #81b3d2;
-  }
-  &--close {
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-    background-color: #ffffff;
-    top: 11px;
-    transition: transform .3s ease;
-  }
-  &::after {
     content: "";
     position: absolute;
-    display: block;
+    right: 0;
+    top: 9px;
     width: 23px;
     height: 4px;
-    background-color: #ffffff;
-    transform: rotate(-45deg);
-    // transition: transform .3s ease;
+    box-shadow: 0 7px #81b3d2,0 -7px #81b3d2;
+    background-color: #81b3d2;
   }
-}
+  &--close {
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+      background-color: #ffffff;
+      top: 11px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 23px;
+      height: 4px;
+      background-color: #ffffff;
+      transform: rotate(-45deg);
+    }
+  }
   &--open {
     content: "";
     position: absolute;
   }
-   @media #{$tablet} {
-     display: none;
-   }
+  @media #{$tablet} {
+    display: none;
+  }
   &--nojs {
     display: none;
   }
- }
- .pop-up-close-button {
-   width: 180px;
-   margin-left: -90px;
-   position: absolute;
-   position: relative;
-   left: 50%;
-   margin-top: 25px;
-   &--success {
-     position: static;
-     margin: 0;
-     width: 100%;
-   }
-   @media #{$tablet} {
-     width: 270px;
-     margin-left: -135px;
-     margin-top: 30px;
-   }
-   &--success {
-     position: static;
-     margin: 0;
-     width: 100%;
-   }
- }
+}
+.pop-up-close-button {
+  width: 180px;
+  margin-left: -90px;
+  position: absolute;
+  position: relative;
+  left: 50%;
+  margin-top: 25px;
+  &--success {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+  @media #{$tablet} {
+    width: 270px;
+    margin-left: -135px;
+    margin-top: 30px;
+  }
+  &--success {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+}

@@ -1,14 +1,14 @@
 .social {
-    margin-top: 37px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media #{$tablet} {
-     margin-top: 0;
-     margin-left: -12px;
+    margin-top: 0;
+    margin-left: -12px;
   }
   @media #{$desktop} {
-     margin-left: -17px;
+    margin-left: -17px;
   }
 }
 .social__icon {

@@ -1,29 +1,28 @@
 @import "../mixin";
-.page-header__top-row  {
-    // width: 100%;
-    background-color: #ffffff;
-    min-height: 56px;
-    @media #{$tablet} {
-      position: static;
-      min-height: 0;
-    }
+.page-header__top-row {
+  background-color: #ffffff;
+  min-height: 56px;
+  @media #{$tablet} {
+    position: static;
+    min-height: 0;
   }
+}
 .page-header__logo {
-    position: absolute;
-    @include horizont-center;
-    z-index: 1;
-    img {
-      width: 102px;
-      height: 84px;
-    }
-    @media #{$tablet} {
-      top: 0;
-    }
-    @media #{$desktop} {
+  position: absolute;
+  @include horizont-center;
+  z-index: 1;
+  img {
+    width: 102px;
+    height: 84px;
+  }
+  @media #{$tablet} {
+    top: 0;
+  }
+  @media #{$desktop} {
     @include horizont-center;
     img {
       width: 187px;
       height: 96px;
     }
-    }
   }
+}

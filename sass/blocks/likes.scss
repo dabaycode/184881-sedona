@@ -5,7 +5,7 @@
   align-items: center;
   margin-top: 6px;
   @media #{$tablet} {
-  margin: 0;
+    margin: 0;
   }
 }
 .likes__icon {
@@ -29,5 +29,4 @@
   @media #{$desktop} {
     color: #ffffff;
   }
-
 }

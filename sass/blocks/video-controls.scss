@@ -30,12 +30,12 @@
 .video-controls__volume {
   height: 45px;
   background-color: rgba(0,0,0,0.6);
-    @media #{$tablet} {
-      background: none;
-      padding: 0;
-      position: relative;
-      top: 22px;
-    }
+  @media #{$tablet} {
+    background: none;
+    padding: 0;
+    position: relative;
+    top: 22px;
+  }
 }
 .video-controls__volume-scale {
   position: relative;

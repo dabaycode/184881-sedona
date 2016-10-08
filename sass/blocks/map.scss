@@ -5,9 +5,9 @@
 }
 .map__img {
   width: 100%;
-    @media #{$desktop} {
+  @media #{$desktop} {
     height: 350px;
-    }
+  }
 }
 .map__marker {
   position: absolute;

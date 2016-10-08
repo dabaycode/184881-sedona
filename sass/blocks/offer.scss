@@ -8,8 +8,7 @@
   text-align: center;
   width: 100%;
   &--main {
-    @media #{$only-mobile}
-    {
+    @media #{$only-mobile} {
       padding-top: 27px;
       padding-bottom: 50px;
     }
@@ -23,9 +22,9 @@
   }
   &--gallery {
     @media #{$tablet} {
-    padding-top: 66px;
-    padding-bottom: 73px;
-  }
+      padding-top: 66px;
+      padding-bottom: 73px;
+    }
     @media #{$desktop} {
       padding-top: 69px;
       padding-bottom: 72px;
@@ -33,40 +32,38 @@
   }
 }
 .offer__title {
-    margin-top: 0;
-    @include title($title-color);
-    font-size: 21px;
-    line-height: 26px;
+  margin-top: 0;
+  @include title($title-color);
+  font-size: 21px;
+  line-height: 26px;
+  @media #{$tablet} {
+    font-size: 30px;
+  }
+  &--gallery {
+    font-size: 18px;
     @media #{$tablet} {
       font-size: 30px;
     }
-    &--gallery {
-      font-size: 18px;
-      @media #{$tablet} {
-        font-size: 30px;
-      }
-    }
   }
+}
 .offer__text {
-    margin-top: 20px;
-    margin-bottom: 0;
-    @include text($text-color);
-    line-height: 24px;
-    padding: 0 20px;
-    &--gallery {
-      margin-top: 26px;
-      padding: 0 25px;
-    }
-    @media #{$tablet} {
-     margin-top: 31px;
-     padding: 0 110px;
-    }
-    @media #{$desktop} {
-     padding: 0 380px;
-    }
+  margin-top: 20px;
+  margin-bottom: 0;
+  @include text($text-color);
+  line-height: 24px;
+  padding: 0 20px;
+  &--gallery {
+    margin-top: 26px;
+    padding: 0 25px;
   }
-
-
+  @media #{$tablet} {
+    margin-top: 31px;
+    padding: 0 110px;
+  }
+  @media #{$desktop} {
+    padding: 0 380px;
+  }
+}
 .offer__search-btn {
   margin-left: auto;
   margin-right: auto;
@@ -74,11 +71,11 @@
   margin-bottom: 0;
   font-size: 21px;
   @media #{$tablet} {
-  margin-top: 44px;
-  width: 59.63%;
+    margin-top: 44px;
+    width: 59.63%;
   }
   @media #{$desktop} {
-  margin-top: 45px;
-  width: 38.16%;
+    margin-top: 45px;
+    width: 38.16%;
   }
 }

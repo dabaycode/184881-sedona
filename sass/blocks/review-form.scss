@@ -134,9 +134,9 @@
     }
    }
     &--visually-hidden {
-        @media #{$tablet} and #{$tablet-max} {
-          display: none;
-        }
+      @media #{$tablet} and #{$tablet-max} {
+        display: none;
+      }
     }
   }
 .review-form__label
@@ -148,7 +148,6 @@
     margin-top: 20px;
     @include text($text-color);
     line-height: 26px;
-
     &:first-child{
       margin: 0;
     }
@@ -258,7 +257,6 @@
         padding-bottom: 65px;
       }
     }
-
   }
   .review-form__input {
    width: 100%;
@@ -320,9 +318,6 @@
     @media #{$desktop} {
       top: 66px;
       left: 227px;
-      &--visually-hidden {
-        // display: none;
-      }
     }
   }
   .review-form__input-radio, .review-form__input-check {
@@ -336,22 +331,21 @@
     position: relative;
   }
   .review-form__label-radio {
-      @include title($text-color);
-      text-transform: none;
-      padding-top: 26px;
+    @include title($text-color);
+    text-transform: none;
+    padding-top: 26px;
+    padding-bottom: 19px;
+    &:first-of-type {
+      padding-top: 19px;
       padding-bottom: 19px;
-      &:first-of-type {
-        padding-top: 19px;
-        padding-bottom: 19px;
-      }
-      @media #{$tablet} {
-        padding-top: 33px;
-      }
-      @media #{$desktop} {
-        padding-top: 35px;
-      }
+    }
+    @media #{$tablet} {
+      padding-top: 33px;
+    }
+    @media #{$desktop} {
+      padding-top: 35px;
+    }
   }
-
   .review-form__input-radio + .review-form__label-radio::before {
     display: block;
     position: absolute;
@@ -363,11 +357,10 @@
     border-radius: 50%;
     background-color: #f2f2f2;
   }
-
  .review-form__input-radio:hover + .review-form__label-radio::before {
     background-color: #e5e5e5;
   }
-  .review-form__input-radio:active + .review-form__label-radio::before {
+ .review-form__input-radio:active + .review-form__label-radio::before {
     background-color: #d5d5d5;
   }
 .review-form__input-radio:checked + .review-form__label-radio::after {
