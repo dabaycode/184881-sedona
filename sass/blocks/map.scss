@@ -1,14 +1,9 @@
 @import "../variables";
 @import "../mixin";
 .map {
-  position: relative;
-}
-.map__img {
   width: 100%;
-  height: auto;
-  @media #{$desktop} {
-    height: 350px;
-  }
+  height: 350px;
+  position: relative;
 }
 .map__marker {
   position: absolute;
@@ -18,4 +13,10 @@
   transform: translate(-50%, -50%);
   width: 27px;
   height: 27px;
+}
+.map__static {
+  display: none;
+  &--nojs {
+    display: block;
+  }
 }
