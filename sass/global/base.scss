@@ -21,6 +21,7 @@ a {
 .container {
   margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
   @media #{$desktop} {
     width: 1200px;
   }
