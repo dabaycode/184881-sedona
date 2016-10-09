@@ -4,6 +4,15 @@
   width: 100%;
   height: 350px;
   position: relative;
+  iframe {
+   width: 100%;
+   height: 100%;
+   border: 0;
+  }
+}
+.map__img {
+  width: 100%;
+  height: 100%;
 }
 .map__marker {
   position: absolute;
@@ -18,5 +27,10 @@
   display: none;
   &--nojs {
     display: block;
+  }
+}
+.map__interactive {
+  &--nojs {
+    display: none;
   }
 }
