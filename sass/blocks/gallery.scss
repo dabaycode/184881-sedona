@@ -42,7 +42,6 @@
 .gallery__img {
   display: block;
   width: 100%;
-  height: auto;
   @media #{$tablet} {
     height: 267px;
     &--full {
@@ -50,7 +49,6 @@
     }
   }
 }
-
 .gallery__title-photo {
   margin: 0;
   @include text(#000000);

@@ -2,9 +2,9 @@
 @import "variables";
 .btn {
   display: block;
-  padding: 0;
+  padding: 15px;
   margin: 0;
-  height: $btn-height;
+  box-sizing: border-box;
   width: $btn-width;
   text-align: center;
   vertical-align: middle;
@@ -13,7 +13,7 @@
   cursor: pointer;
   @include title($btn-text-color);
   background-color: $btn-color;
-  line-height: $btn-height;
+  line-height: 26px;
   &:hover {
     background-color: $btn-color-hvr;
   }
@@ -26,7 +26,7 @@
     color: $btn-text-color-disabled;
   }
 }
-.header-toogle__btn {
+.header-toogle-btn {
   position: absolute;
   top: 15px;
   right: 20px;

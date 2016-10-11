@@ -19,6 +19,9 @@
   display: block;
   width: 100%;
   height: auto;
+  @media #{$only-mobile} {
+    height: 257px;
+  }
   @media #{$desktop} {
     margin-top: -70px;
   }

@@ -30,7 +30,7 @@
               <img src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
             </picture>
           </a>
-          <button class="header-toogle__btn header-toogle__btn--close" type="button">Закрыть меню</button>
+          <button class="header-toogle-btn header-toogle-btn--close" type="button">Закрыть меню</button>
         </div>
       </header>
       <div class="page-promo">
@@ -138,8 +138,7 @@
             </figure>
             <div class="offer offer--gallery">
               <b class="offer__title offer__title--gallery">Все еще сомневаетесь?</b>
-              <p class="offer__text offer__text--gallery">
-                Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+              <p class="offer__text offer__text--gallery">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
             </div>
             <figure class="gallery__video">
               <div class="gallery__video-preview">
@@ -192,24 +191,24 @@
     </div>
     <script>
     var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.header-toogle__btn');
+    var navToggle = document.querySelector('.header-toogle-btn');
     navMain.classList.remove('main-nav--nojs');
     navMain.classList.remove('main-nav--opened');
     navMain.classList.add('main-nav--closed');
-    navToggle.classList.remove('header-toogle__btn--close');
-    navToggle.classList.add('header-toogle__btn--open');
+    navToggle.classList.remove('header-toogle-btn--close');
+    navToggle.classList.add('header-toogle-btn--open');
     navToggle.addEventListener('click', function() {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
-        navToggle.classList.remove('header-toogle__btn--open');
-        navToggle.classList.add('header-toogle__btn--close');
+        navToggle.classList.remove('header-toogle-btn--open');
+        navToggle.classList.add('header-toogle-btn--close');
       }
       else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
-        navToggle.classList.remove('header-toogle__btn--close');
-        navToggle.classList.add('header-toogle__btn--open');
+        navToggle.classList.remove('header-toogle-btn--close');
+        navToggle.classList.add('header-toogle-btn--open');
      }
     });
     </script>

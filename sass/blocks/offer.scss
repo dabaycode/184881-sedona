@@ -59,6 +59,9 @@
   @media #{$tablet} {
     margin-top: 31px;
     padding: 0 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   @media #{$desktop} {
     padding: 0 380px;
@@ -67,7 +70,7 @@
 .offer__search-btn {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 35px;
+  margin-top: 38px;
   margin-bottom: 0;
   font-size: 21px;
   @media #{$tablet} {

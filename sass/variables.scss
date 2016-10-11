@@ -1,6 +1,5 @@
 // Fonts
-$font-main: "PT Sans";
-$font-alt: "Arial";
+$font: "PT Sans", "Arial", sans-serif;
 $normal: 400;
 $bold: 700;
 $title-color: #000000;
@@ -15,7 +14,6 @@ $btn-text-color-active: #94b9d2;
 $btn-color-disabled: #e5e5e5;
 $btn-text-color-disabled: #ffffff;
 $btn-width: 280px;
-$btn-height: 58px;
 
 // Widths
 $only-mobile: "(max-width: 767px)";

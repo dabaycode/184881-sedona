@@ -30,7 +30,7 @@
               <img src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
             </picture>
           </a>
-          <button class="header-toogle__btn header-toogle__btn--close" type="button">Закрыть меню</button>
+          <button class="header-toogle-btn header-toogle-btn--close" type="button">Закрыть меню</button>
         </div>
       </header>
       <div class="page-promo page-promo--main">
@@ -66,8 +66,7 @@
               <img class="advantages__icon" src="img/icon-gift.svg" alt="" width="75" height="72">
               <h3 class="advantages__title">Сувениры</h3>
               <p class="advantages__text">
-                Не только китайского,
-                <br class="wrap-tablet">
+                <span class="wrap-tablet">Не только китайского,</span>
                 но и местного производства!
               </p>
             </li>
@@ -75,23 +74,17 @@
               <img class="advantages__icon" src="img/icon-burger.svg" alt="" width="75" height="72">
               <h3 class="advantages__title">Еда</h3>
               <p class="advantages__text">
-                Всегда заказывайте
-                <br class="wrap-mobile">
-                фирменный бургер, Вы не разочаруетесь!
+                Всегда заказывайте фирменный бургер, Вы не разочаруетесь!
               </p>
             </li>
           </ul>
         </section>
         <section class="photo-reason">
           <div class="reason reason--blue reason--right">
-            <h2 class="reason__title">Там есть <br class="wrap-tablet"> мост дьявола</h2>
-            <p class="reason__number">№2</p>
+            <h2 class="reason__title"><span class="wrap-tablet wrap-tablet--up">Там есть</span> мост дьявола</h2>
+            <p class="reason__number reason__number--up">№2</p>
             <p class="reason__text">
-              Да, по нему можно пройтись!
-              <br class="wrap-desktop">
-              Если
-              <br class="wrap-mobile">
-              конечно вы осмелитесь
+              Да, по нему можно пройтись! Если конечно вы осмелитесь
             </p>
           </div>
           <div class="photo-reason__img">
@@ -107,14 +100,14 @@
             <h2 class="reason__title">Небольшая площадь</h2>
             <p class="reason__number">№3</p>
             <p class="reason__text">
-              Все достопримеча<span class="wrap-tablet">-<br></span>тельности находятся очень близко
+              <span class="wrap-tablet">Все достопримеча<span class="mobile-hidden">-</span></span>тельности находятся очень близко
             </p>
           </div>
           <div class="reason reason--grey">
             <h2 class="reason__title">Красивая дорога</h2>
             <p class="reason__number">№4</p>
             <p class="reason__text">Ехать в седону из Лас-Вегаса совсем
-              <br class="wrap-desktop">
+              <!-- <br class="wrap-desktop"> -->
               не скучно!
             </p>
           </div>
@@ -127,8 +120,8 @@
         <div class="offer offer--main">
           <b class="offer__title">Заинтересовались?</b>
           <p class="offer__text">
-            Укажите предполагаемые даты поездки
-            <br class="wrap-tablet">
+            <span class="wrap-tablet">Укажите предполагаемые даты поездки</span>
+            <!-- <br class="wrap-tablet"> -->
             и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
           <a href="#" class="offer__search-btn btn">Найти гостиницу</a>
@@ -168,24 +161,24 @@
     </div>
     <script>
     var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.header-toogle__btn');
+    var navToggle = document.querySelector('.header-toogle-btn');
     navMain.classList.remove('main-nav--nojs');
     navMain.classList.remove('main-nav--opened');
     navMain.classList.add('main-nav--closed');
-    navToggle.classList.remove('header-toogle__btn--close');
-    navToggle.classList.add('header-toogle__btn--open');
+    navToggle.classList.remove('header-toogle-btn--close');
+    navToggle.classList.add('header-toogle-btn--open');
     navToggle.addEventListener('click', function() {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
-        navToggle.classList.remove('header-toogle__btn--open');
-        navToggle.classList.add('header-toogle__btn--close');
+        navToggle.classList.remove('header-toogle-btn--open');
+        navToggle.classList.add('header-toogle-btn--close');
       }
       else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
-        navToggle.classList.remove('header-toogle__btn--close');
-        navToggle.classList.add('header-toogle__btn--open');
+        navToggle.classList.remove('header-toogle-btn--close');
+        navToggle.classList.add('header-toogle-btn--open');
      }
     });
     </script>

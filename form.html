@@ -30,7 +30,7 @@
               <img src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
             </picture>
           </a>
-          <button class="header-toogle__btn header-toogle__btn--close" type="button">Закрыть меню</button>
+          <button class="header-toogle-btn header-toogle-btn--close" type="button">Закрыть меню</button>
         </div>
       </header>
       <div class="page-promo">
@@ -65,17 +65,21 @@
             <div class="review-form__wrapper review-form__wrapper--contacts">
               <h2 class="review-form__title review-form__title--line">Контактная информация:</h2>
               <div class="review-form__group review-form__group--contacts">
-                <label class="review-form__label review-form__label--column review-form__label--phone" for="phone">
-                  <span class="review-form__label-title">
-                    <span class="review-form__label-title--hidden">Контактный</span> телефон:
-                  </span>
-                  <input class="review-form__input-contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон">
-                </label>
-                <small class="review-form__phone-error review-form__phone-error--visually-hidden">Ошибка, перепроверьте номер</small>
-                <label class="review-form__label review-form__label--column review-form__label--email" for="email">
-                  <span class="review-form__label-title">Электронная почта:</span>
+                <div class="review-form__phone-group">
+                  <label class="review-form__label review-form__label--phone" for="phone">
+                    <span class="review-form__label-title">
+                      <span class="review-form__label-title review-form__label-title--hidden">Контактный</span> телефон:
+                    </span>
+                  </label>
+                  <input class="review-form__input-contacts" type="tel" name="phone" id="phone" placeholder="Введите номер">
+                  <small class="review-form__phone-error review-form__phone-error--visually-hidden">Ошибка, перепроверьте номер</small>
+                </div>
+                <div class="review-form__mail-group">
+                  <label class="review-form__label review-form__label--email" for="email">
+                    <span class="review-form__label-title">Электронная почта:</span>
+                  </label>
                   <input class="review-form__input-contacts" type="email" name="email" id="email" placeholder="Введите e-mail">
-                </label>
+                </div>
               </div>
             </div>
           </fieldset>
@@ -156,24 +160,24 @@
     </div>
     <script>
     var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.header-toogle__btn');
+    var navToggle = document.querySelector('.header-toogle-btn');
     navMain.classList.remove('main-nav--nojs');
     navMain.classList.remove('main-nav--opened');
     navMain.classList.add('main-nav--closed');
-    navToggle.classList.remove('header-toogle__btn--close');
-    navToggle.classList.add('header-toogle__btn--open');
+    navToggle.classList.remove('header-toogle-btn--close');
+    navToggle.classList.add('header-toogle-btn--open');
     navToggle.addEventListener('click', function() {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
-        navToggle.classList.remove('header-toogle__btn--open');
-        navToggle.classList.add('header-toogle__btn--close');
+        navToggle.classList.remove('header-toogle-btn--open');
+        navToggle.classList.add('header-toogle-btn--close');
       }
       else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
-        navToggle.classList.remove('header-toogle__btn--close');
-        navToggle.classList.add('header-toogle__btn--open');
+        navToggle.classList.remove('header-toogle-btn--close');
+        navToggle.classList.add('header-toogle-btn--open');
      }
     });
     </script>

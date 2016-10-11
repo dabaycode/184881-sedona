@@ -11,6 +11,10 @@
 .advantages__item {
   @media #{$only-mobile} {
     position: relative;
+    padding-right: 20px;
+    padding-left: 71px;
+    padding-top: 36px;
+    padding-bottom: 0;
     &>.advantages__icon {
       top: 28px;
     }
@@ -22,15 +26,12 @@
     }
     &:last-child {
       padding-top: 27px;
-      padding-bottom: 36px;
+      padding-bottom: 40px;
       &>.advantages__icon {
         top: 24px;
         left: 19px;
       }
     }
-    padding-left: 71px;
-    padding-top: 36px;
-    padding-bottom: 0;
   }
   @media #{$tablet} {
     display: flex;
@@ -89,5 +90,8 @@
   @media #{$tablet} {
     margin: 0;
     margin-top: 21px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

@@ -12,20 +12,26 @@
   width: 100%;
   border: none;
   border-top: 1px solid #e5e5e5;
+  @media #{$only-mobile} {
+    &--name {
+      position: relative;
+      z-index: 2;
+    }
+  }
   @media #{$tablet} {
     border: none;
     position: relative;
-  &--feels {
-  order: -1;
-  width: 50%;
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 6px;
-    height: 292px;
-    border-left: 1px solid #dbdbdb;
-  }
+    &--feels {
+      order: -1;
+      width: 50%;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 6px;
+      height: 292px;
+      border-left: 1px solid #dbdbdb;
+    }
   }
   &--name {
   width: 50%;
@@ -52,7 +58,7 @@
   @media #{$tablet} {
     margin-top: 57px;
     &--sights {
-      margin-top: 14px;
+      margin-top: 10px;
       padding-left: 94px;
       padding-right: 35px;
     }
@@ -60,10 +66,15 @@
       margin-top: 24px;
     }
   }
+    @media #{$tablet} {
+      &--contacts {
+        margin-top: 20px;
+      }
+    }
   @media #{$desktop} {
     justify-content: space-between;
     &--contacts {
-      margin-top: 73px;
+      margin-top: 40px;
     }
     &--sights {
       margin-top: 12px;
@@ -71,7 +82,7 @@
       padding-right: 0;
     }
     &--impress {
-      margin-left: 5px;
+      margin-left: 6px;
     }
   }
 }
@@ -129,7 +140,7 @@
     }
     @media #{$desktop} {
     &--desktop-impress {
-      margin-left: 81px;
+      margin-left: 75px;
     }
     &--desktop-name{
       margin-left: 0;
@@ -142,61 +153,33 @@
     }
   }
 .review-form__label {
-    width: 100%;
-    display: flex;
-    position: relative;
-    align-items: center;
     margin-top: 20px;
     @include text($text-color);
     line-height: 26px;
     &:first-child{
       margin: 0;
     }
-  &--column {
-    flex-direction: column;
-    margin: 0;
-    @media #{$desktop} {
-      flex-direction: row;
-    }
-  }
-  &--phone,&--email {
-    align-items: flex-start;
+  &--email, &--phone {
+    display: flex;
     @media #{$desktop} {
     align-items: center;
-    }
-    &::after {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 58px;
-      height: 58px;
-      content: "";
-      background-color: #e6e6e6;
-      background-repeat: no-repeat;
-      background-position: center;
+    height: 58px;
     }
   }
   &--phone {
+    @media #{$tablet} {
+      order: -1;
+      width: 179px;
+    }
     @media #{$desktop} {
-      width: calc(400/960*100%);
+      width: auto;
     }
-    &::after {
-      background-image: url("../img/icon-phone.svg");
 
-    }
   }
   &--email {
     margin-top: 10px;
     @media #{$tablet} {
       margin-top: 20px;
-    }
-    @media #{$desktop} {
-      width: calc(480/960*100%);
-      margin-top: 0;
-    }
-    &::after {
-      bottom: 0;
-      background-image: url("../img/icon-mail.svg");
     }
   }
   &--visually-hidden {
@@ -208,11 +191,12 @@
   .review-form__label-title {
     margin-left: 22px;
     @media #{$desktop} {
-        margin-left: 0;
+      margin-left: 0;
     }
     &--hidden {
-        @media #{$desktop} {
-          display: none;
+      margin-left: 0;
+      @media #{$desktop} {
+        display: none;
       }
     }
   }
@@ -238,7 +222,7 @@
       }
     }
     @media #{$desktop} {
-      padding: 0 120px 65px 120px;
+      padding: 0 118px 65px;
       &--contacts {
       padding-bottom: 52px;
       }
@@ -264,6 +248,7 @@
    height: 58px;
    margin-left: 20px;
    padding: 0 22px;
+   outline: none;
    background-color: #f2f2f2;
    border: none;
    font-weight: $bold;
@@ -284,6 +269,7 @@
     height: 58px;
     padding: 0 60px 0 22px;
     margin-top: 8px;
+    outline: none;
     background-color: #f2f2f2;
     border: none;
     font-weight: $bold;
@@ -298,6 +284,9 @@
       background-color: #ffffff;
       background: none;
     }
+    @media #{$tablet} {
+      margin-top: 6px;
+    }
     @media #{$desktop} {
       width: 314px;
       margin-top: 0;
@@ -311,14 +300,14 @@
     line-height: 26px;
     color: #ff5c5c;
     @media #{$tablet} {
-      position: absolute;
-      margin: 0;
-      top: 50px;
-      right: 61px;
+      margin-left: auto;
     }
     @media #{$desktop} {
-      top: 66px;
-      left: 227px;
+      order: -2;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 8px;
+      margin-left: 107px;
     }
   }
   .review-form__input-radio, .review-form__input-check {
@@ -428,6 +417,29 @@
   color: #000000;
   line-height: 26px;
   background-color: #e6e6e6;
+  &:-moz-placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    font-family: $font;
+    color: rgba(0,0,0,1);
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    font-family: $font;
+    color: rgba(0,0,0,1);
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    font-family: $font;
+    color: rgba(0, 0, 0, 1);
+  }
   @media #{$tablet} {
     margin-top: 57px;
   }
@@ -443,10 +455,10 @@
   @media #{$tablet} {
     width: 50%;
     box-sizing: border-box;
-    padding-top: 42px;
-    padding-bottom: 20px;
+    padding-top: 45px;
+    padding-bottom: 18px;
     &:first-of-type {
-      padding-top: 42px;
+      padding-top: 45px;
     }
     &:nth-of-type(2) {
       order: 2;
@@ -499,4 +511,65 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #333333;
+}
+.review-form__phone-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  &::after {
+    @media #{$only-mobile} {
+      bottom: 30px;
+    }
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      content: "";
+      background-color: #e6e6e6;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/icon-phone.svg");
+  }
+  @media #{$desktop} {
+    width: calc(400/960*100%);
+    justify-content: flex-start;;
+    align-items: flex-end;
+  }
+  .review-form__input-contacts {
+    @media #{$tablet} {
+      order: 1;
+    }
+  }
+}
+.review-form__mail-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    content: "";
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/icon-mail.svg");
+  }
+  @media #{$tablet} {
+    margin-top: 24px;
+  }
+  @media #{$desktop} {
+    width: 50%;
+    margin-top: 0;
+    justify-content: flex-start;;
+    align-items: flex-end;
+  }
 }

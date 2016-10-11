@@ -7,6 +7,9 @@
   line-height: 26px;
   width: 100%;
   @media #{$tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     font-size: 21px;
   }
   @media #{$desktop} {
@@ -49,6 +52,11 @@
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
+  @media #{$tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
 }
 .reason {
   text-align: center;
@@ -76,9 +84,17 @@
       &::before {
         border-bottom: 2px solid #bcd6e7;
       }
+      @media #{tablet} {
+        &--up {
+          margin-top: 0;
+        }
+      }
       @media #{$desktop} {
         margin-top: -10px;
         margin-bottom: 0;
+        &--up {
+          margin-top: 0;
+        }
       }
     }
     .reason__title {
@@ -104,7 +120,7 @@
     }
     @media #{$tablet} {
       width: calc(100%/3);
-      padding: 43px 50px 45px;
+      padding: 43px 48px 45px;
     }
     @media #{$desktop} {
       padding-bottom: 67px;
