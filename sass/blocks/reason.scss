@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     justify-content: center;
     font-size: 21px;
+
   }
   @media #{$desktop} {
     padding: 0 80px;
@@ -56,7 +57,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
- }
+}
+  @media #{$desktop} {
+    &--wrap {
+      padding: 0 20px;
+    }
+  }
 }
 .reason {
   text-align: center;
@@ -133,8 +139,16 @@
   }
   &--right {
     .reason__title {
+      @media #{$tablet} {
+        &--wrap {
+          padding: 0 18px;
+        }
+      }
       @media #{$desktop} {
         padding: 0;
+        &--wrap {
+          padding: 0 50px;
+        }
       }
     }
     @media #{$only-mobile} {

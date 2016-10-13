@@ -94,4 +94,9 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  @media #{$desktop} {
+    &--wrap {
+      padding: 0 40px;
+    }
+  }
 }

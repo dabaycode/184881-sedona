@@ -31,6 +31,11 @@ a {
     display: none;
   }
 }
+.tablet-hidden {
+  @media #{$tablet} {
+    display: none;
+  }
+}
 .wrap {
   &-mobile {
     width: 100%;
